@@ -15,7 +15,7 @@ const WorkingProcess = () => {
         <h3 className="text-center text-[#C9A96E] font-serif mb-16 tracking-[0.2em] text-lg uppercase">
           • Working Process •
         </h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {processes.map((proc, i) => (
             <motion.div
@@ -29,7 +29,7 @@ const WorkingProcess = () => {
               {i !== processes.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-[2px] bg-gray-200 dark:bg-white/10 z-0"></div>
               )}
-              
+
               <div className="w-16 h-16 rounded-full bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 flex items-center justify-center text-[#C9A96E] text-2xl mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                 {proc.icon}
               </div>
