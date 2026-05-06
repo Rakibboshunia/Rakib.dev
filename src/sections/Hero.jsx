@@ -1,130 +1,170 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import { ArrowRight, Play } from "lucide-react";
-import mypic from "../assets/boshunia.jpeg";
 import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA .pdf";
 import MagneticButton from "../components/common/MagneticButton";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Import images for the video slideshow
+import img1 from "../assets/video/WhatsApp Image.jpeg";
+import img2 from "../assets/video/WhatsApp Image 20.jpeg";
+import img3 from "../assets/video/WhatsApp Image 2026.jpeg";
+import img4 from "../assets/video/WhatsApp Image 2026-05-06 at 11.18.57 AM.jpeg";
+
+const slideshowImages = [img1, img2, img3, img4];
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-  const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-  const y2 = useTransform(scrollY, [0, 500], [0, -150]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const containerRef = useRef(null);
+  const stickyRef = useRef(null);
+  const videoContainerRef = useRef(null);
+  const textRef = useRef(null);
+  
+  const [currentFrame, setCurrentFrame] = useState(0);
+
+  // Slideshow effect to simulate a video
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFrame((prev) => (prev + 1) % slideshowImages.length);
+    }, 1500); // Change image every 1.5 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  useGSAP(() => {
+    // Initial setup for the video container (positioned on the right)
+    gsap.set(videoContainerRef.current, {
+      top: "50%",
+      right: "5%",
+      yPercent: -50,
+      xPercent: 0,
+      width: "35vw",
+      height: "70vh",
+      borderRadius: "3rem",
+    });
+
+    // On mobile, maybe adjust initial setup
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) {
+      gsap.set(videoContainerRef.current, {
+        top: "50%",
+        right: "0%",
+        width: "100vw",
+        height: "60vh",
+        opacity: 0.5,
+      });
+    }
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top top",
+        end: "+=200%", // Scroll distance (200vh)
+        scrub: 1, // Smooth scrub
+        pin: stickyRef.current,
+      }
+    });
+
+    // Video container expands to fill screen and moves to center
+    tl.to(videoContainerRef.current, {
+      width: "100vw",
+      height: "100vh",
+      borderRadius: "0px",
+      right: "0%",
+      xPercent: 0,
+      opacity: 1,
+      ease: "power2.inOut",
+    }, 0);
+
+    // Text fades out and moves left/up
+    tl.to(textRef.current, {
+      opacity: 0,
+      x: isMobile ? 0 : -100,
+      y: isMobile ? -50 : 0,
+      ease: "power2.inOut",
+    }, 0);
+
+  }, { scope: containerRef });
 
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center px-6 overflow-hidden pt-32 pb-20 bg-transparent"
-    >
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-16 items-center">
+    <section id="home" ref={containerRef} className="relative h-[300vh] bg-transparent">
+      {/* Sticky Container */}
+      <div 
+        ref={stickyRef} 
+        className="sticky top-0 h-screen w-full overflow-hidden bg-transparent"
+      >
         
-        {/* LEFT CONTENT - 7 Columns */}
-        <motion.div 
-          style={{ opacity }}
-          className="lg:col-span-7 z-10"
-        >
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs uppercase mb-8 block font-bold">
-              • Specialized in Full-Stack Excellence
-            </span>
-            <h1 className="text-6xl md:text-8xl font-serif leading-[0.9] tracking-tighter mb-10">
-              Crafting <br /> 
-              <span className="text-[#C9A96E]">Digital</span> <br />
-              Masterpieces.
-            </h1>
-          </motion.div>
+        {/* Overlay Content (Text on Left) */}
+        <div className="absolute inset-0 flex items-center pointer-events-none z-10">
+          <div className="w-full max-w-7xl mx-auto px-6">
+            <div 
+              ref={textRef}
+              className="w-full lg:w-3/5 flex flex-col items-start text-left will-change-[opacity,transform]"
+            >
+              <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-6 block font-bold shadow-black drop-shadow-md">
+                • Specialized in Full-Stack Excellence
+              </span>
+              <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-serif leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl mix-blend-lighten text-white">
+                Crafting <br /> 
+                <span className="text-[#C9A96E]">Digital</span> <br />
+                Masterpieces.
+              </h1>
+              
+              <p className="text-gray-300 text-lg md:text-xl max-w-xl mb-12 drop-shadow-lg font-medium">
+                I build high-performance, visually striking web applications that 
+                bridge the gap between complex engineering and pure aesthetic.
+              </p>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-500 dark:text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl mb-12"
-          >
-            I build high-performance, visually striking web applications that 
-            bridge the gap between complex engineering and pure aesthetic. 
-            Welcome to the next generation of the web.
-          </motion.p>
+              <div className="flex flex-wrap gap-8 items-center pointer-events-auto">
+                <MagneticButton>
+                  <a
+                    href={cvFile}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group relative px-8 py-4 bg-[#C9A96E] text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105 flex items-center gap-3 shadow-xl"
+                  >
+                    <span>GET RESUME</span>
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </MagneticButton>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-8 items-center"
-          >
-            <MagneticButton>
-              <a
-                href={cvFile}
-                target="_blank"
-                rel="noreferrer"
-                className="group relative px-10 py-5 bg-[#C9A96E] text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105 flex items-center gap-3"
-              >
-                <span>GET RESUME</span>
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-            </MagneticButton>
-
-            <button className="flex items-center gap-4 text-sm font-bold tracking-widest uppercase hover:text-[#C9A96E] transition-colors group">
-              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#C9A96E] transition-colors">
-                <Play size={14} fill="currentColor" />
-              </div>
-              View Showreel
-            </button>
-          </motion.div>
-        </motion.div>
-
-        {/* RIGHT VISUAL - 5 Columns */}
-        <div className="lg:col-span-5 relative">
-          <motion.div 
-            style={{ y: y1 }}
-            className="relative z-10 aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl"
-          >
-            <img 
-              src={mypic} 
-              alt="Rakib Boshunia" 
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-110 hover:scale-100"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
-          </motion.div>
-
-          {/* Decorative Elements */}
-          <motion.div 
-            style={{ y: y2 }}
-            className="absolute -top-12 -right-12 w-64 h-64 border border-[#C9A96E]/20 rounded-full -z-10"
-          />
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#C9A96E]/10 blur-3xl rounded-full -z-10" />
-          
-          {/* Floating Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="absolute bottom-12 -left-12 glass p-6 rounded-2xl border-white/10 shadow-2xl hidden md:block"
-          >
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#C9A96E]/20 flex items-center justify-center text-[#C9A96E]">
-                <span className="text-xs font-bold">2+</span>
-              </div>
-              <div>
-                <p className="text-[10px] font-bold tracking-widest uppercase opacity-50">Experience</p>
-                <p className="text-sm font-bold">Years of Innovation</p>
+                <button className="flex items-center gap-4 text-sm font-bold tracking-widest uppercase hover:text-[#C9A96E] transition-colors group text-white">
+                  <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:border-[#C9A96E] transition-colors bg-black/20 backdrop-blur-sm">
+                    <Play size={14} fill="currentColor" />
+                  </div>
+                  View Showreel
+                </button>
               </div>
             </div>
-          </motion.div>
+          </div>
+        </div>
+
+        {/* Slideshow/Video Container (Right Side expanding to Full Screen) */}
+        <div 
+          ref={videoContainerRef}
+          className="absolute z-0 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] will-change-[width,height,border-radius,right] bg-black"
+        >
+          {slideshowImages.map((img, idx) => (
+            <img 
+              key={idx}
+              src={img}
+              alt={`Slide ${idx + 1}`}
+              className={`absolute inset-0 w-full h-full object-cover will-change-[opacity,transform] transition-all duration-[1500ms] grayscale hover:grayscale-0 ${currentFrame === idx ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+            />
+          ))}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent opacity-90 pointer-events-none"></div>
+        </div>
+
+        {/* Scroll Background Text */}
+        <div 
+          className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none opacity-[0.04] z-[-1]"
+        >
+          <h2 className="text-[18vw] font-serif leading-none whitespace-nowrap text-center -mb-5 md:-mb-10 text-white font-bold tracking-tighter">
+            DEVELOPER DESIGNER
+          </h2>
         </div>
       </div>
-
-      {/* Scroll Background Text */}
-      <motion.div 
-        style={{ y: y2 }}
-        className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none opacity-[0.02] dark:opacity-[0.03]"
-      >
-        <h2 className="text-[25vw] font-serif leading-none whitespace-nowrap -mb-10">
-          DEVELOPER DESIGNER ENGINEER
-        </h2>
-      </motion.div>
     </section>
   );
 };
