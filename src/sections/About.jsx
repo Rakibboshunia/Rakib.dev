@@ -1,10 +1,43 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import mypic from "../assets/boshunia.jpeg";
 import SEOHelmet from "../components/common/SEOHelmet";
 import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA .pdf";
 import MagneticButton from "../components/common/MagneticButton";
-import CountUp from "react-countup";
 import SpotlightCard from "../components/common/SpotlightCard";
+
+const Counter = ({ end, duration = 2, suffix = "" }) => {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const startAnimation = () => {
+    if (hasAnimated) return;
+    setHasAnimated(true);
+
+    let startTime;
+    let animationFrame;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = (timestamp - startTime) / (duration * 1000);
+
+      if (progress < 1) {
+        setCount(Math.floor(end * progress));
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+  };
+
+  return (
+    <motion.span onViewportEnter={startAnimation}>
+      {count}{suffix}
+    </motion.span>
+  );
+};
 
 const About = () => {
   const stats = [
@@ -90,7 +123,7 @@ const About = () => {
               {stats.map((stat, i) => (
                 <SpotlightCard key={i} className="glass-card p-10 rounded-3xl text-center border-white/5">
                   <div className="text-[#C9A96E] text-4xl font-serif mb-2">
-                    <CountUp end={stat.value} duration={3} suffix={stat.suffix} enableScrollSpy />
+                    <Counter end={stat.value} duration={3} suffix={stat.suffix} />
                   </div>
                   <div className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-40">{stat.label}</div>
                 </SpotlightCard>
