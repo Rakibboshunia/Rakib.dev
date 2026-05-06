@@ -19,17 +19,23 @@ const mernSkills = [
 
 const experiences = [
   {
-    role: "Software Developer",
+    role: "Frontend Developer",
     company: "Fire AI - Betopia Group",
     year: "2025 - Present",
     desc: "Developing and deploying frontend web applications, e-commerce platforms, and interactive user interfaces.",
   },
   {
-    role: "Senior Frontend Developer",
+    role: "Frontend Developer",
     company: "Freelance",
     year: "2024 - 2025",
     desc: "Specialized in building responsive frontend architectures using React, Next.js, and Tailwind CSS with a focus on web performance.",
   },
+  {
+    role: "Designer For POD (print on demand) Store",
+    company: "Freelance - Various Clients Worldwide",
+    year: "2021 - 2024",
+    desc: "Crafted unique designs for print-on-demand platforms, leveraging creativity and market trends to create compelling products that resonate with customers.",
+  }
 ];
 
 const SkillsExperience = () => {
@@ -38,7 +44,7 @@ const SkillsExperience = () => {
       <SEOHelmet title="Skills & Experience | Boshunia" />
       {/* Background glow */}
       <div className="absolute w-[600px] h-[600px] bg-[#C9A96E]/10 blur-[150px] rounded-full top-[-100px] left-1/2 -translate-x-1/2"></div>
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-[#C9A96E] font-serif tracking-[0.3em] text-lg mb-4">
@@ -59,7 +65,7 @@ const SkillsExperience = () => {
             <h3 className="text-2xl font-serif text-gray-900 dark:text-white mb-8 border-b border-gray-200 dark:border-white/10 pb-4">Technical Skills</h3>
             <div className="grid grid-cols-2 gap-6">
               {mernSkills.map((skill, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
