@@ -49,7 +49,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-32 px-6 relative overflow-hidden transition-colors duration-300"
+      className="py-20 md:py-32 px-6 relative overflow-hidden transition-colors duration-300"
     >
       <SEOHelmet title="About | Boshunia" />
 
@@ -90,7 +90,7 @@ const About = () => {
               initial={{ x: 20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="absolute -bottom-6 -right-6 glass-card p-8 rounded-3xl border-white/10 shadow-2xl max-w-[240px]"
+              className="absolute -bottom-6 right-0 md:-right-6 glass-card p-8 rounded-3xl border-white/10 shadow-2xl max-w-[240px]"
             >
               <p className="text-[10px] tracking-[0.3em] font-bold text-[#C9A96E] uppercase mb-4">Background</p>
               <p className="text-sm leading-relaxed font-medium">Merging computer science principles with high-end aesthetic design.</p>
@@ -119,7 +119,7 @@ const About = () => {
             </p>
 
             {/* 📊 Stats Grid */}
-            <div className="grid grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {stats.map((stat, i) => (
                 <SpotlightCard key={i} className="glass-card p-10 rounded-3xl text-center border-white/5">
                   <div className="text-[#C9A96E] text-4xl font-serif mb-2">

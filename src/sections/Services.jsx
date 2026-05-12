@@ -64,7 +64,7 @@ const services = [
 const Services = () => {
   return (
     <>
-      <section id="services" className="py-36 px-6 bg-[#f8f9fa] dark:bg-[#0D0D0D] relative overflow-hidden transition-colors duration-300">
+      <section id="services" className="py-24 md:py-36 px-6 bg-[#f8f9fa] dark:bg-[#0D0D0D] relative overflow-hidden transition-colors duration-300">
         <SEOHelmet title="Services | Boshunia" />
         {/* 🔥 Multi Glow Background */}
       <div className="absolute w-[600px] h-[600px] bg-[#C9A96E]/10 blur-[160px] rounded-full top-[-200px] left-1/2 -translate-x-1/2"></div>

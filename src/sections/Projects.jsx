@@ -31,7 +31,7 @@ const Projects = () => {
       <SEOHelmet title="Projects | Boshunia" />
 
       {/* Header Section */}
-      <div className="max-w-7xl mx-auto px-6 pt-32 pb-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 pt-24 md:pt-32 pb-12 md:pb-20 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

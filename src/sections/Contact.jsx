@@ -75,7 +75,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-36 px-6 bg-[#f8f9fa] dark:bg-[#0D0D0D] relative overflow-hidden transition-colors duration-300">
+    <section id="contact" className="py-24 md:py-36 px-6 bg-[#f8f9fa] dark:bg-[#0D0D0D] relative overflow-hidden transition-colors duration-300">
       <SEOHelmet title="FAQ & Contact | Boshunia" />
       {/* 🔥 Glow */}
       <div className="absolute w-[600px] h-[600px] bg-[#C9A96E]/10 blur-[160px] rounded-full top-0 left-1/2 -translate-x-1/2"></div>
@@ -125,7 +125,7 @@ const Contact = () => {
       </div>
 
       {/* ================= CONTACT (UNCHANGED, NOW LAST) ================= */}
-      <div className="max-w-6xl mx-auto mt-40 relative z-10 grid md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-6xl mx-auto mt-24 md:mt-40 relative z-10 grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT SIDE */}
         <motion.div

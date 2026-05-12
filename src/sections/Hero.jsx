@@ -2,9 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import { ArrowRight, Play } from "lucide-react";
 import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA .pdf";
 import MagneticButton from "../components/common/MagneticButton";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Import images for the video slideshow
 import img1 from "../assets/video/WhatsApp Image.jpeg";
@@ -14,13 +11,8 @@ import img4 from "../assets/video/WhatsApp Image 2026-05-06 at 11.18.57 AM.jpeg"
 
 const slideshowImages = [img1, img2, img3, img4];
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Hero = () => {
   const containerRef = useRef(null);
-  const stickyRef = useRef(null);
-  const videoContainerRef = useRef(null);
-  const textRef = useRef(null);
   
   const [currentFrame, setCurrentFrame] = useState(0);
 
@@ -32,74 +24,17 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useGSAP(() => {
-    // Initial setup for the video container (positioned on the right)
-    gsap.set(videoContainerRef.current, {
-      top: "50%",
-      right: "5%",
-      yPercent: -50,
-      xPercent: 0,
-      width: "35vw",
-      height: "70vh",
-      borderRadius: "3rem",
-    });
-
-    // On mobile, maybe adjust initial setup
-    const isMobile = window.innerWidth < 768;
-    if (isMobile) {
-      gsap.set(videoContainerRef.current, {
-        top: "50%",
-        right: "0%",
-        width: "100vw",
-        height: "60vh",
-        opacity: 0.5,
-      });
-    }
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: "+=200%", // Scroll distance (200vh)
-        scrub: 1, // Smooth scrub
-        pin: stickyRef.current,
-      }
-    });
-
-    // Video container expands to fill screen and moves to center
-    tl.to(videoContainerRef.current, {
-      width: "100vw",
-      height: "100vh",
-      borderRadius: "0px",
-      right: "0%",
-      xPercent: 0,
-      opacity: 1,
-      ease: "power2.inOut",
-    }, 0);
-
-    // Text fades out and moves left/up
-    tl.to(textRef.current, {
-      opacity: 0,
-      x: isMobile ? 0 : -100,
-      y: isMobile ? -50 : 0,
-      ease: "power2.inOut",
-    }, 0);
-
-  }, { scope: containerRef });
-
   return (
-    <section id="home" ref={containerRef} className="relative h-[300vh] bg-transparent">
-      {/* Sticky Container */}
+    <section id="home" ref={containerRef} className="relative h-screen bg-transparent">
+      {/* Container */}
       <div 
-        ref={stickyRef} 
-        className="sticky top-0 h-screen w-full overflow-hidden bg-transparent"
+        className="relative h-screen w-full overflow-hidden bg-transparent"
       >
         
         {/* Overlay Content (Text on Left) */}
         <div className="absolute inset-0 flex items-center pointer-events-none z-10">
           <div className="w-full max-w-7xl mx-auto px-6">
             <div 
-              ref={textRef}
               className="w-full lg:w-3/5 flex flex-col items-start text-left will-change-[opacity,transform]"
             >
               <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-6 block font-bold shadow-black drop-shadow-md">
@@ -140,20 +75,19 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Slideshow/Video Container (Right Side expanding to Full Screen) */}
+        {/* Slideshow/Video Container (Right Side) */}
         <div 
-          ref={videoContainerRef}
-          className="absolute z-0 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] will-change-[width,height,border-radius,right] bg-black"
+          className="absolute top-1/2 -translate-y-1/2 right-0 md:right-[5%] w-full md:w-[35vw] h-[60vh] md:h-[70vh] opacity-50 md:opacity-100 rounded-none md:rounded-[3rem] z-0 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] bg-black"
         >
           {slideshowImages.map((img, idx) => (
             <img 
               key={idx}
               src={img}
               alt={`Slide ${idx + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover will-change-[opacity,transform] transition-all duration-[1500ms] grayscale hover:grayscale-0 ${currentFrame === idx ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] grayscale hover:grayscale-0 ${currentFrame === idx ? 'opacity-100' : 'opacity-0'}`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent opacity-90 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent opacity-90 pointer-events-none md:hidden"></div>
         </div>
 
         {/* Scroll Background Text */}
