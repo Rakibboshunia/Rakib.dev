@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA .pdf";
 import MagneticButton from "../components/common/MagneticButton";
@@ -37,6 +38,22 @@ const Hero = () => {
             <div 
               className="w-full lg:w-3/5 flex flex-col items-start text-left will-change-[opacity,transform]"
             >
+              {/* 🟢 Availability Badge */}
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span className="text-[10px] font-bold tracking-[0.2em] text-white/70 uppercase">
+                  Available for new projects
+                </span>
+              </motion.div>
+
               <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-6 block font-bold shadow-black drop-shadow-md">
                 • Specialized in Full-Stack Excellence
               </span>

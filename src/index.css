@@ -12,25 +12,22 @@ button {
 
 /* Custom Premium Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #080808;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(201, 169, 110, 0.4);
-  border-radius: 20px;
+  background: linear-gradient(to bottom, transparent, #C9A96E, transparent);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(201, 169, 110, 0.8);
+  background: #C9A96E;
 }
 
-.dark ::-webkit-scrollbar-track {
-  background: #0D0D0D;
-}
 
 /* --- ✨ PREMIUM UTILS --- */
 .glass {
