@@ -1,8 +1,88 @@
 import img1 from "../assets/E-com.jpg";
 import img2 from "../assets/landing page.webp";
 import img3 from "../assets/dashboard.webp";
+import img4 from "../assets/Screenshot 2026-05-12 154122.png";
+import img5 from "../assets/Screenshot 2026-05-12 155310.png";
+import img6 from "../assets/Screenshot 2026-05-12 155700.png";
+import img7 from "../assets/Screenshot 2026-05-12 160457.png";
 
 export const projectsData = [
+  {
+    id: 7,
+    title: "Rory Admin Dashboard",
+    category: "Dashboard",
+    badgeLabel: "ADMIN PANEL",
+    description:
+      "A feature-rich administrative dashboard built for managing a creative platform, focusing on data visualization and user management.",
+    tags: ["#React", "#Chart.js", "#Firebase", "#TailwindCSS"],
+    image: img7,
+    githubLink: "https://github.com/Rakibboshunia",
+    liveLink: "https://rory-admin-dashboard.vercel.app/",
+    overview:
+      "Rory Admin Dashboard is the nerve center for the Soundtrack My Night ecosystem. It provides administrators with a birds-eye view of user activity, playlist generation metrics, and revenue tracking.",
+    challenges:
+      "Integrating disparate data streams into a cohesive, high-performance dashboard that provides actionable insights without overwhelming the user.",
+    solution:
+      "Leveraged React with optimized state management and used modular component architecture. Integrated charting libraries for clear data visualization and implemented secure authentication for admin access.",
+    technologies: ["React", "Chart.js", "Firebase", "Tailwind CSS", "State Management"],
+  },
+  {
+    id: 6,
+    title: "Day-Night News",
+    category: "Landing Page",
+    badgeLabel: "NEWS PLATFORM",
+    description:
+      "A sophisticated pixel-perfect recreation of a major news platform, featuring dynamic themes and a high-density information architecture.",
+    tags: ["#React", "#TailwindCSS", "#NewsAPI", "#A11y"],
+    image: img6,
+    githubLink: "https://github.com/Rakibboshunia",
+    liveLink: "https://bbc-news-dublicate.vercel.app/",
+    overview:
+      "Day-Night News is a technical demonstration of complex UI cloning and responsive design. It replicates the BBC News interface with precision, focusing on accessibility and readability.",
+    challenges:
+      "Managing a highly dense content grid and ensuring that the typography remains perfectly legible across various screen sizes and themes (Light vs. Dark).",
+    solution:
+      "Utilized Tailwind's advanced grid system and implemented a robust theme provider. Used semantic HTML5 elements to ensure the information hierarchy matches industry standards.",
+    technologies: ["React", "Tailwind CSS", "Context API", "Responsive Grid", "Semantic HTML"],
+  },
+  {
+    id: 5,
+    title: "Soundtrack My Night",
+    category: "Landing Page",
+    badgeLabel: "INTERACTIVE WEB",
+    description:
+      "A vibrant, high-energy landing page for an AI-powered Spotify playlist generator specifically designed for wedding events.",
+    tags: ["#React", "#SpotifyAPI", "#FramerMotion", "#UIUX"],
+    image: img5,
+    githubLink: "https://github.com/Rakibboshunia",
+    liveLink: "https://soundtrackmynight.com/",
+    overview:
+      "Soundtrack My Night is a creative digital platform that helps couples generate the perfect wedding playlist. The site features a 60-second quiz and instant Spotify integration.",
+    challenges:
+      "Creating a visual identity that feels both celebratory and technologically advanced, while ensuring a smooth transition between the landing page and the interactive quiz component.",
+    solution:
+      "Implemented a high-contrast, vibrant color palette with smooth Framer Motion transitions. Optimized the mobile experience to ensure the quiz is easily accessible for users on the go.",
+    technologies: ["React", "Spotify API", "Framer Motion", "Tailwind CSS", "Responsive Design"],
+  },
+  {
+    id: 4,
+    title: "Edukai Automation Engine",
+    category: "Dashboard",
+    badgeLabel: "AI & AUTOMATION",
+    description:
+      "An AI-powered CV automation and recruitment dashboard system for monitoring real-time workflows and processing efficiency.",
+    tags: ["#React", "#Node.js", "#AI", "#Dashboard"],
+    image: img4,
+    githubLink: "https://github.com/Rakibboshunia",
+    liveLink: "https://edukaicvsub.edukai.co.uk/",
+    overview:
+      "Edukai is a sophisticated automation engine designed to streamline recruitment processes. It features a real-time dashboard for monitoring CV imports, quality checks, and submission success rates.",
+    challenges:
+      "Ensuring real-time data synchronization across various automation stages while maintaining a clean, intuitive interface for super admins to manage complex recruitment workflows.",
+    solution:
+      "Developed a robust dashboard using React with real-time state updates. Integrated data visualization for tracking success rates and processing metrics, ensuring high visibility into system performance.",
+    technologies: ["React", "Node.js", "Tailwind CSS", "Data Visualization", "Automation"],
+  },
   {
     id: 1,
     title: "OREBI E-Commerce",
