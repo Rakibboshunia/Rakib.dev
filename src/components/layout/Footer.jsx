@@ -86,7 +86,7 @@ const Footer = () => {
             {/* Dynamic Local Clock Panel */}
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200/50 dark:border-white/10 text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300">
               <FaClock className="text-[#C9A96E] animate-pulse" />
-              <span>Dhaka, BD</span>
+              <span>Gaibandha, Rangpur, Bangladesh</span>
               <span className="text-[#C9A96E] font-mono">{localTime || "12:00 PM"}</span>
             </div>
           </div>
@@ -136,7 +136,7 @@ const Footer = () => {
               <ul className="space-y-3.5 text-gray-600 dark:text-gray-400 text-sm font-semibold">
                 <li className="flex items-center gap-3">
                   <FaMapMarkerAlt className="text-[#C9A96E] shrink-0" />
-                  <span>Rangpur, Bangladesh</span>
+                  <span>Gaibandha, Rangpur, Bangladesh</span>
                 </li>
                 <li>
                   <a 
@@ -153,7 +153,7 @@ const Footer = () => {
                     className="flex items-center gap-3 hover:text-[#C9A96E] transition-colors group"
                   >
                     <FaPhoneAlt className="text-[#C9A96E] shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="font-mono">+880 1779 296092</span>
+                    <span className="font-mono">+880 1779-296092</span>
                   </a>
                 </li>
               </ul>
