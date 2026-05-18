@@ -2,27 +2,27 @@ import { motion } from "framer-motion";
 import { FaPaintBrush, FaCode, FaRocket, FaSearch } from "react-icons/fa";
 
 const processes = [
-  { 
-    title: "Discovery", 
-    desc: "We start by deep-diving into your project scope, target audience, and business goals to ensure a solid foundation.", 
+  {
+    title: "Discovery",
+    desc: "We start by deep-diving into your project scope, target audience, and business goals to ensure a solid foundation.",
     icon: <FaSearch />,
     step: "01"
   },
-  { 
-    title: "Design", 
-    desc: "Crafting intuitive UI/UX with modern aesthetics, focus on user psychology, and high-end visual storytelling.", 
+  {
+    title: "Design",
+    desc: "Crafting intuitive UI/UX with modern aesthetics, focus on user psychology, and high-end visual storytelling.",
     icon: <FaPaintBrush />,
     step: "02"
   },
-  { 
-    title: "Development", 
-    desc: "Translating designs into clean, scalable code using cutting-edge technologies for maximum performance.", 
+  {
+    title: "Development",
+    desc: "Translating designs into clean, scalable code using cutting-edge technologies for maximum performance.",
     icon: <FaCode />,
     step: "03"
   },
-  { 
-    title: "Launch", 
-    desc: "Rigorous testing followed by seamless deployment and optimization to ensure your product performs at its best.", 
+  {
+    title: "Launch",
+    desc: "Rigorous testing followed by seamless deployment and optimization to ensure your product performs at its best.",
     icon: <FaRocket />,
     step: "04"
   },
@@ -30,20 +30,20 @@ const processes = [
 
 const WorkingProcess = () => {
   return (
-    <section className="py-32 px-6 bg-[#fcfcfc] dark:bg-[#080808] transition-colors duration-500 relative overflow-hidden">
+    <section className="py-16 md:py-24 px-6 bg-[#fcfcfc] dark:bg-[#080808] transition-colors duration-500 relative overflow-hidden">
       {/* Decorative background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-[#C9A96E]/20 to-transparent"></div>
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-24">
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-[#C9A96E] font-serif mb-6 tracking-[0.4em] text-xs uppercase font-bold"
           >
             • The Methodology
           </motion.h3>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}

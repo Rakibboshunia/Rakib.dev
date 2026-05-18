@@ -1,5 +1,5 @@
-import { useState, useRef } from "react";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import SEOHelmet from "../components/common/SEOHelmet";
@@ -11,12 +11,6 @@ const categories = ["All", "E-Commerce", "Landing Page", "Dashboard"];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const scrollRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-66%"]);
 
   const filteredProjects =
     activeCategory === "All"
@@ -32,7 +26,7 @@ const Projects = () => {
 
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-6 pt-24 md:pt-32 pb-12 md:pb-20 relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-12"
@@ -52,11 +46,10 @@ const Projects = () => {
               <button
                 key={i}
                 onClick={() => setActiveCategory(cat)}
-                className={`pb-2 border-b-2 transition-all duration-500 ${
-                  activeCategory === cat
+                className={`pb-2 border-b-2 transition-all duration-500 ${activeCategory === cat
                     ? "border-[#C9A96E] text-[#C9A96E]"
                     : "border-transparent text-gray-500 hover:text-gray-300"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -65,65 +58,59 @@ const Projects = () => {
         </motion.div>
       </div>
 
-      {/* Horizontal Scroll Content (Desktop) */}
-      <div ref={scrollRef} className="relative h-[300vh] hidden lg:block">
-        <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-          <motion.div style={{ x }} className="flex gap-12 px-[10vw]">
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project, i) => (
-                <ProjectCard key={project.id} project={project} index={i} />
-              ))}
-            </AnimatePresence>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Grid Content (Mobile/Tablet) */}
-      <div className="lg:hidden max-w-7xl mx-auto px-6 pb-32">
-        <div className="grid md:grid-cols-2 gap-12">
-          {filteredProjects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} isGrid />
-          ))}
-        </div>
+      {/* Beautiful Premium Grid (1 col on mobile, 2 col on tablet, 3 col on desktop) */}
+      <div className="max-w-7xl mx-auto px-6 pb-32 relative z-10">
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project, i) => (
+              <ProjectCard key={project.id} project={project} index={i} />
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-const ProjectCard = ({ project, index, isGrid = false }) => (
+const ProjectCard = ({ project, index }) => (
   <motion.div
     layout
-    initial={{ opacity: 0, x: 50 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    exit={{ opacity: 0, scale: 0.8 }}
-    transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-    className={`${isGrid ? "w-full" : "w-[450px] shrink-0"}`}
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, scale: 0.9 }}
+    transition={{ duration: 0.6, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
+    className="w-full h-full"
   >
-    <SpotlightCard className="glass-card rounded-[2.5rem] overflow-hidden group border-white/5 h-full">
-      <Link to={`/projects/${project.id}`} className="block relative aspect-[4/5] overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-        
-        {/* Content Overlay */}
-        <div className="absolute bottom-10 left-10 right-10">
-           <span className="text-[10px] font-bold tracking-[0.3em] text-[#C9A96E] uppercase mb-3 block">
-             {project.category}
-           </span>
-           <h4 className="text-2xl font-serif text-white mb-6 group-hover:text-[#C9A96E] transition-colors">
-             {project.title}
-           </h4>
-           <div className="flex items-center gap-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+    <SpotlightCard className="glass-card rounded-[2.5rem] overflow-hidden group border-white/5 h-full flex flex-col justify-between">
+      <div className="flex-grow">
+        <Link to={`/projects/${project.id}`} className="block relative aspect-[3/2] overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500"></div>
+
+          {/* Content Overlay */}
+          <div className="absolute bottom-6 left-8 right-8">
+            <span className="text-[10px] font-bold tracking-[0.3em] text-[#C9A96E] uppercase mb-2 block">
+              {project.category}
+            </span>
+            <h4 className="text-xl md:text-2xl font-serif text-white mb-4 group-hover:text-[#C9A96E] transition-colors">
+              {project.title}
+            </h4>
+            <div className="flex items-center gap-4 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500">
               <span className="text-xs font-bold tracking-widest uppercase text-white">View Details</span>
               <ArrowRight size={16} className="text-[#C9A96E]" />
-           </div>
-        </div>
-      </Link>
+            </div>
+          </div>
+        </Link>
+      </div>
 
-      <div className="p-10 flex gap-6 items-center border-t border-white/5">
+      <div className="py-6 px-8 flex gap-6 items-center border-t border-white/5 bg-neutral-900/10 dark:bg-black/10">
         <a
           href={project.githubLink}
           target="_blank"
@@ -149,4 +136,4 @@ const ProjectCard = ({ project, index, isGrid = false }) => (
   </motion.div>
 );
 
-export default Projects;
+export default Projects;

@@ -83,7 +83,7 @@ const Testimonial = () => {
   return (
     <section
       id="testimonials"
-      className="relative py-24 md:py-48 px-6 bg-white dark:bg-[#080808] overflow-hidden transition-colors duration-500"
+      className="relative pt-10 md:pt-14 pb-16 md:pb-24 px-6 bg-white dark:bg-[#080808] overflow-hidden transition-colors duration-500"
     >
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-40">
@@ -93,7 +93,7 @@ const Testimonial = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          
+
           {/* Left Side: Content */}
           <div className="order-2 lg:order-1">
             <motion.div
@@ -177,32 +177,32 @@ const Testimonial = () => {
               {/* Decorative rings */}
               <div className="absolute inset-0 rounded-full border border-[#C9A96E]/20 animate-[spin_20s_linear_infinite]"></div>
               <div className="absolute inset-4 rounded-full border border-[#C9A96E]/10 animate-[spin_15s_linear_infinite_reverse]"></div>
-              
+
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-4/5 h-4/5 glass-card rounded-[3rem] overflow-hidden rotate-3 shadow-2xl">
-                   <AnimatePresence mode="wait">
-                      <motion.img
-                        key={index}
-                        initial={{ opacity: 0, scale: 1.1 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.9 }}
-                        transition={{ duration: 1 }}
-                        src={data[index].image}
-                        className="w-full h-full object-cover grayscale"
-                        alt="Testimonial background"
-                      />
-                   </AnimatePresence>
-                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                   
-                   <div className="absolute bottom-8 left-8 right-8">
-                      <p className="text-[#C9A96E] text-[10px] font-bold tracking-[0.4em] uppercase mb-2">Project Success</p>
-                      <h4 className="text-white text-xl font-serif">{data[index].project}</h4>
-                   </div>
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={index}
+                      initial={{ opacity: 0, scale: 1.1 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 1 }}
+                      src={data[index].image}
+                      className="w-full h-full object-cover grayscale"
+                      alt="Testimonial background"
+                    />
+                  </AnimatePresence>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <p className="text-[#C9A96E] text-[10px] font-bold tracking-[0.4em] uppercase mb-2">Project Success</p>
+                    <h4 className="text-white text-xl font-serif">{data[index].project}</h4>
+                  </div>
                 </div>
               </div>
 
               {/* Floating Quote Icon */}
-              <motion.div 
+              <motion.div
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
                 className="absolute -top-4 -right-4 w-20 h-20 rounded-2xl bg-[#C9A96E] flex items-center justify-center text-black text-3xl shadow-xl shadow-[#C9A96E]/20 z-20"

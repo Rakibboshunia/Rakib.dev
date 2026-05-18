@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import mypic from "../assets/boshunia.jpeg";
+import mypic from "../assets/boshunia-about.jpg";
 import SEOHelmet from "../components/common/SEOHelmet";
 import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA .pdf";
 import MagneticButton from "../components/common/MagneticButton";
@@ -49,7 +49,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 md:py-32 px-6 relative overflow-hidden transition-colors duration-300"
+      className="py-16 md:py-24 px-6 relative overflow-hidden transition-colors duration-300"
     >
       <SEOHelmet title="About | Boshunia" />
 
@@ -86,7 +86,7 @@ const About = () => {
             </div>
 
             {/* Floating Info */}
-            <motion.div 
+            <motion.div
               initial={{ x: 20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
@@ -110,11 +110,11 @@ const About = () => {
             </h3>
 
             <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-lg mb-16 max-w-xl">
-              I specialize in bridging the gap between complex backend logic and 
-              seamless frontend interfaces. My approach is rooted in clean code, 
+              I specialize in bridging the gap between complex backend logic and
+              seamless frontend interfaces. My approach is rooted in clean code,
               scalable architecture, and a relentless pursuit of visual perfection.
               <br /><br />
-              Currently focused on evolving my stack with advanced Node.js integrations 
+              Currently focused on evolving my stack with advanced Node.js integrations
               and state-of-the-art interactive design patterns.
             </p>
 
@@ -138,13 +138,13 @@ const About = () => {
                   rel="noreferrer"
                   className="px-12 py-5 bg-[#C9A96E] text-black font-bold rounded-full hover:shadow-[0_20px_40px_rgba(201,169,110,0.3)] transition-all tracking-wider"
                 >
-                  DOWNLOAD DOSSIER
+                  DOWNLOAD RESUME
                 </a>
               </MagneticButton>
-              
+
               <div className="flex gap-3">
                 {[1, 2, 3].map((_, i) => (
-                  <motion.span 
+                  <motion.span
                     key={i}
                     animate={{ scale: [1, 1.5, 1], opacity: [0.3, 1, 0.3] }}
                     transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
@@ -160,4 +160,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About;

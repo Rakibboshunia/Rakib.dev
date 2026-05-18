@@ -5,7 +5,7 @@ import MagneticButton from "./MagneticButton";
 
 const CTA = () => {
   return (
-    <section className="py-32 px-6 relative overflow-hidden bg-black text-white">
+    <section className="pt-10 md:pt-14 pb-16 md:pb-24 px-6 relative overflow-hidden bg-black text-white">
       {/* Background Glow */}
       <div className="absolute w-[800px] h-[800px] bg-[#C9A96E]/10 blur-[200px] rounded-full -top-1/2 left-1/2 -translate-x-1/2 opacity-50"></div>
       

@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import WorkingProcess from "../../sections/WorkingProcess";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import CustomCursor from "../common/CustomCursor";
@@ -40,7 +39,6 @@ const RootLayout = () => {
           </PageTransition>
         </motion.main>
       </AnimatePresence>
-      {location.pathname !== "/contact" && <WorkingProcess />}
       <Footer />
     </>
   );

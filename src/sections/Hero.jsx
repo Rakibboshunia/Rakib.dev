@@ -1,49 +1,33 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA .pdf";
 import MagneticButton from "../components/common/MagneticButton";
-
-// Import images for the video slideshow
-import img1 from "../assets/video/WhatsApp Image.jpeg";
-import img2 from "../assets/video/WhatsApp Image 20.jpeg";
-import img3 from "../assets/video/WhatsApp Image 2026.jpeg";
-import img4 from "../assets/video/WhatsApp Image 2026-05-06 at 11.18.57 AM.jpeg";
-
-const slideshowImages = [img1, img2, img3, img4];
+import heroImg from "../assets/boshunia-hero.jpg";
 
 const Hero = () => {
   const containerRef = useRef(null);
-  
-  const [currentFrame, setCurrentFrame] = useState(0);
-
-  // Slideshow effect to simulate a video
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFrame((prev) => (prev + 1) % slideshowImages.length);
-    }, 1500); // Change image every 1.5 seconds
-    return () => clearInterval(interval);
-  }, []);
 
   return (
-    <section id="home" ref={containerRef} className="relative h-screen bg-transparent">
+    <section 
+      id="home" 
+      ref={containerRef} 
+      className="relative min-h-screen md:h-screen bg-transparent flex flex-col justify-center overflow-hidden pt-28 pb-16 md:py-0"
+    >
       {/* Container */}
-      <div 
-        className="relative h-screen w-full overflow-hidden bg-transparent"
-      >
+      <div className="relative w-full flex-grow flex flex-col md:block justify-center bg-transparent">
         
-        {/* Overlay Content (Text on Left) */}
-        <div className="absolute inset-0 flex items-center pointer-events-none z-10">
-          <div className="w-full max-w-7xl mx-auto px-6">
-            <div 
-              className="w-full lg:w-3/5 flex flex-col items-start text-left will-change-[opacity,transform]"
-            >
+        {/* Text Content (Left Side on Desktop, Top on Mobile) */}
+        <div className="relative md:absolute md:inset-0 flex items-center pointer-events-none z-10 w-full px-6 md:px-0">
+          <div className="w-full max-w-7xl mx-auto pointer-events-auto">
+            <div className="w-full lg:w-3/5 flex flex-col items-start text-left will-change-[opacity,transform]">
+              
               {/* 🟢 Availability Badge */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 md:mb-8 backdrop-blur-sm"
               >
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -54,21 +38,22 @@ const Hero = () => {
                 </span>
               </motion.div>
 
-              <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-6 block font-bold shadow-black drop-shadow-md">
-                • Specialized in Full-Stack Excellence
+              <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-4 md:mb-6 block font-bold shadow-black drop-shadow-md">
+                • Specialized in Frontend Excellence
               </span>
-              <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-serif leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl mix-blend-lighten text-white">
-                Crafting <br /> 
+              
+              <h1 className="text-5xl md:text-8xl lg:text-[7rem] font-serif leading-[0.9] tracking-tighter mb-6 md:mb-8 drop-shadow-2xl mix-blend-lighten text-white">
+                Crafting <br />
                 <span className="text-[#C9A96E]">Digital</span> <br />
                 Masterpieces.
               </h1>
-              
-              <p className="text-gray-300 text-lg md:text-xl max-w-xl mb-12 drop-shadow-lg font-medium">
-                I build high-performance, visually striking web applications that 
+
+              <p className="text-gray-300 text-base md:text-xl max-w-xl mb-8 md:mb-12 drop-shadow-lg font-medium">
+                I build high-performance, visually striking web applications that
                 bridge the gap between complex engineering and pure aesthetic.
               </p>
 
-              <div className="flex flex-wrap gap-8 items-center pointer-events-auto">
+              <div className="flex flex-wrap gap-6 md:gap-8 items-center">
                 <MagneticButton>
                   <a
                     href={cvFile}
@@ -92,25 +77,55 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Slideshow/Video Container (Right Side) */}
-        <div 
-          className="absolute top-1/2 -translate-y-1/2 right-0 md:right-[5%] w-full md:w-[35vw] h-[60vh] md:h-[70vh] opacity-50 md:opacity-100 rounded-none md:rounded-[3rem] z-0 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] bg-black"
-        >
-          {slideshowImages.map((img, idx) => (
-            <img 
-              key={idx}
-              src={img}
-              alt={`Slide ${idx + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] grayscale hover:grayscale-0 ${currentFrame === idx ? 'opacity-100' : 'opacity-0'}`}
+        {/* Interactive Premium Portrait Container (Right Side on Desktop, Bottom on Mobile) */}
+        <div className="relative md:absolute md:top-1/2 md:-translate-y-1/2 right-0 md:right-[5%] w-full md:w-[34vw] h-[55vh] md:h-[75vh] z-0 flex items-center justify-center px-6 md:px-0 mt-12 md:mt-0">
+          
+          {/* Subtle Ambient Radial Glow */}
+          <div className="absolute -inset-10 bg-gradient-to-tr from-[#C9A96E]/15 via-transparent to-transparent rounded-[4rem] blur-3xl opacity-60 pointer-events-none z-0" />
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="relative w-full h-full rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-white/10 shadow-[0_0_60px_rgba(0,0,0,0.8)] bg-neutral-950/20 backdrop-blur-sm group z-10 hover:border-[#C9A96E]/30 transition-all duration-700"
+          >
+            {/* Elegant Grayscale to Color Image with Hover Zoom */}
+            <motion.img
+              src={heroImg}
+              alt="Rakib Boshunia"
+              className="w-full h-full object-cover grayscale transition-all duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:grayscale-0"
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
             />
-          ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent opacity-90 pointer-events-none md:hidden"></div>
+
+            {/* Premium Gold Lighting Overlay on Hover */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none" />
+            <div className="absolute inset-0 bg-[#C9A96E]/5 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+            {/* Floating Premium Badge */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute bottom-6 left-5 right-5 md:bottom-8 md:left-8 md:right-8 bg-neutral-900/80 border border-white/10 backdrop-blur-xl p-4 md:p-6 rounded-3xl flex items-center justify-between shadow-2xl translate-y-0 group-hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            >
+              <div>
+                <h4 className="text-white font-serif text-sm md:text-base tracking-wider mb-1">Al-Rakeb Boshunia</h4>
+                <p className="text-[9px] md:text-[10px] text-[#C9A96E] font-bold tracking-[0.25em] uppercase">Frontend Architect</p>
+              </div>
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:border-[#C9A96E] group-hover:text-[#C9A96E] transition-all duration-500 bg-white/5">
+                <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Subtle responsive side fading overlay for desktop only */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-90 pointer-events-none hidden md:block z-20"></div>
         </div>
 
         {/* Scroll Background Text */}
-        <div 
-          className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none opacity-[0.04] z-[-1]"
-        >
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none opacity-[0.04] z-[-1]">
           <h2 className="text-[18vw] font-serif leading-none whitespace-nowrap text-center -mb-5 md:-mb-10 text-white font-bold tracking-tighter">
             DEVELOPER DESIGNER
           </h2>
