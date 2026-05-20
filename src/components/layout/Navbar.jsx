@@ -145,6 +145,7 @@ const Navbar = () => {
           <div className="flex items-center gap-6 z-[110]">
             <button
               onClick={toggleTheme}
+              aria-label="Toggle Theme"
               className="p-2 rounded-full hover:bg-white/5 transition-colors text-gray-600 dark:text-gray-300"
             >
               {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
@@ -152,6 +153,7 @@ const Navbar = () => {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Mobile Menu"
               className="lg:hidden p-2 text-[#C9A96E] hover:scale-110 transition-transform focus:outline-none"
             >
               {isOpen ? <X size={26} /> : <Menu size={26} />}

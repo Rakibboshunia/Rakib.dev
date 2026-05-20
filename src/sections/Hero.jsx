@@ -93,7 +93,7 @@ const Hero = () => {
             <motion.img
               src={heroImg}
               alt="Rakib Boshunia"
-              className="w-full h-full object-cover grayscale transition-all duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:grayscale-0"
+              className="w-full h-full object-cover transition-all duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
               initial={{ scale: 1.1, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}

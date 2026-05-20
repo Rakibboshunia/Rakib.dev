@@ -6,8 +6,35 @@ import img5 from "../assets/Screenshot 2026-05-12 155310.png";
 import img6 from "../assets/Screenshot 2026-05-12 155700.png";
 import img7 from "../assets/Screenshot 2026-05-12 160457.png";
 import vangoImg from "../assets/vango.png";
+import medaiImg from "../assets/medai_dashboard.png";
 
 export const projectsData = [
+  {
+    id: 9,
+    title: "Med AI Dashboard",
+    category: "Dashboard",
+    badgeLabel: "HEALTHCARE PORTAL",
+    role: "Lead Frontend Developer",
+    description:
+      "A medical administration and user analytics platform designed for tracking doctor onboarding, pharmacy registrations, and patient growth telemetry.",
+    tags: ["#React", "#Chart.js", "#TailwindCSS", "#Redux"],
+    image: medaiImg,
+    githubLink: "https://github.com/Rakibboshunia/MedAi_Dashboard",
+    liveLink: "https://medai.watch/",
+    overview:
+      "Med AI is an administrative and telemetry portal designed for healthcare management. It allows monitoring active users, onboarded doctors, and pharmacy registrations, tracking patient growth trends and medication statistics with clean interactive graphs.",
+    challenges:
+      "Building a highly interactive administration dashboard with statistics, custom user profile sliders, and data charts while keeping visual responsiveness flawless.",
+    solution:
+      "Implemented modular component design in React, Chart.js for clean analytics visualization, and a slide-out drawer pattern for editing profile information.",
+    technologies: ["React", "Chart.js", "Tailwind CSS", "Redux"],
+    features: [
+      "Dynamic onboarding metrics tracking for users, doctors, and pharmacies",
+      "Interactive data visualizations tracking user growth timelines",
+      "Monthly added medication summary indicators",
+      "Custom slide-out account profile manager and authentication panel"
+    ]
+  },
   {
     id: 8,
     title: "VANGO Live Landing Page",
@@ -18,7 +45,7 @@ export const projectsData = [
       "A world-class premium landing page for a revolutionary live commerce platform built to empower people who sell live.",
     tags: ["#React", "#TailwindCSS", "#FramerMotion"],
     image: vangoImg,
-    githubLink: "https://github.com/Rakibboshunia",
+    githubLink: "https://github.com/Rakibboshunia/Vango_Live",
     liveLink: "https://ecommerce-bizsolutio-landingpage.vercel.app/",
     overview:
       "VANGO Live is a next-generation platform for live sellers. The landing page features premium neon gradients, rich modern typography, fluid interactive widgets, and seamless animations to capture waitlist signups.",
@@ -44,7 +71,7 @@ export const projectsData = [
       "A feature-rich administrative dashboard built for managing a creative platform, focusing on data visualization and user management.",
     tags: ["#React", "#Chart.js", "#Firebase", "#TailwindCSS"],
     image: img7,
-    githubLink: "https://github.com/Rakibboshunia",
+    githubLink: "https://github.com/Rakibboshunia/Rory-Admin-Dashboard",
     liveLink: "https://rory-admin-dashboard.vercel.app/",
     overview:
       "Rory Admin Dashboard is the nerve center for the Soundtrack My Night ecosystem. It provides administrators with a birds-eye view of user activity, playlist generation metrics, and revenue tracking.",
@@ -70,7 +97,7 @@ export const projectsData = [
       "A sophisticated pixel-perfect recreation of a major news platform, featuring dynamic themes and a high-density information architecture.",
     tags: ["#React", "#TailwindCSS", "#ContextAPI"],
     image: img6,
-    githubLink: "https://github.com/Rakibboshunia",
+    githubLink: "https://github.com/Rakibboshunia/BBC-News-Copy",
     liveLink: "https://bbc-news-dublicate.vercel.app/",
     overview:
       "Day-Night News is a technical demonstration of complex UI cloning and responsive design. It replicates the BBC News interface with precision, focusing on accessibility and readability.",
@@ -96,7 +123,7 @@ export const projectsData = [
       "A vibrant, high-energy landing page for an AI-powered Spotify playlist generator specifically designed for wedding events.",
     tags: ["#React", "#SpotifyAPI", "#FramerMotion", "#TailwindCSS"],
     image: img5,
-    githubLink: "https://github.com/Rakibboshunia",
+    githubLink: "https://github.com/Rakibboshunia/Rory_Music_Playlist",
     liveLink: "https://soundtrackmynight.com/",
     overview:
       "Soundtrack My Night is a creative digital platform that helps couples generate the perfect wedding playlist. The site features a 60-second quiz and instant Spotify integration.",
@@ -122,7 +149,7 @@ export const projectsData = [
       "An AI-powered CV automation and recruitment dashboard system for monitoring real-time workflows and processing efficiency.",
     tags: ["#React", "#Node.js", "#TailwindCSS"],
     image: img4,
-    githubLink: "https://github.com/Rakibboshunia",
+    githubLink: "https://github.com/Rakibboshunia/EduKai",
     liveLink: "https://edukaicvsub.edukai.co.uk/",
     overview:
       "Edukai is a sophisticated automation engine designed to streamline recruitment processes. It features a real-time dashboard for monitoring CV imports, quality checks, and submission success rates.",

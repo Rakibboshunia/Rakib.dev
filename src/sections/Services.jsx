@@ -86,21 +86,23 @@ const Services = () => {
           {/* Grid */}
           <div className="grid md:grid-cols-3 gap-12">
 
-            {services.map((service, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="group relative p-10 rounded-2xl border border-gray-200 dark:border-[#1a1a1a] bg-white/70 dark:bg-[#111]/70 backdrop-blur-xl transition duration-500 hover:border-[#C9A96E]/50"
-              >
-                {/* Clickable Overlay */}
-                <Link to="/contact" className="absolute inset-0 z-10"></Link>
+            {services.map((service, i) => {
+              const serviceNumber = String(i + 1).padStart(2, "0");
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="group relative p-10 rounded-2xl border border-gray-200 dark:border-[#1a1a1a] bg-white/70 dark:bg-[#111]/70 backdrop-blur-xl transition duration-500 hover:border-[#C9A96E]/50"
+                >
+                  {/* Clickable Overlay */}
+                  <Link to="/contact" className="absolute inset-0 z-10"></Link>
 
-                {/* 🔢 Number (Background Style) */}
-                <span className="absolute top-6 right-6 text-5xl font-serif text-black/5 dark:text-white/5 group-hover:text-[#C9A96E]/10 transition">
-                  {service.number}
-                </span>
+                  {/* 🔢 Number (Background Style) */}
+                  <span className="absolute top-6 right-6 text-5xl font-serif text-black/5 dark:text-white/5 group-hover:text-[#C9A96E]/10 transition">
+                    {serviceNumber}
+                  </span>
 
                 {/* Glow */}
                 <div className="absolute inset-0 bg-[#C9A96E]/5 opacity-0 group-hover:opacity-100 blur-2xl transition"></div>
@@ -129,7 +131,8 @@ const Services = () => {
                 </span>
 
               </motion.div>
-            ))}
+              );
+            })}
 
           </div>
 

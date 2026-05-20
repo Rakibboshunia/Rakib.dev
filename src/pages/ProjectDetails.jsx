@@ -39,7 +39,7 @@ const ProjectDetails = () => {
 
   return (
     <section ref={containerRef} className="relative min-h-screen bg-[#f8f9fa] dark:bg-[#080808] pb-32 transition-colors duration-300 overflow-hidden">
-      <SEOHelmet title={`${project.title} | Boshunia`} />
+      <SEOHelmet title={`${project.title} | Boshunia`} description={project.overview || project.description} />
       
       {/* 🚀 GLOWING AMBIENT BACKGROUND */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#C9A96E]/5 blur-[150px] rounded-full pointer-events-none z-0"></div>

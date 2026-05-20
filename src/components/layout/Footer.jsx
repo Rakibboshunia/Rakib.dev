@@ -202,6 +202,7 @@ const Footer = () => {
               onClick={scrollToTop}
               className="w-12 h-12 rounded-full border border-[#C9A96E]/30 hover:border-[#C9A96E] text-[#C9A96E] flex items-center justify-center hover:bg-[#C9A96E] hover:text-black transition-all duration-500 group shadow-lg"
               title="Back to Top"
+              aria-label="Scroll to Top"
             >
               <FaArrowUp className="group-hover:-translate-y-1 transition-transform duration-300" size={14} />
             </button>
