@@ -1,38 +1,66 @@
 import img1 from "../assets/E-com.jpg";
-import img2 from "../assets/landing page.webp";
-import img3 from "../assets/dashboard.webp";
 import img4 from "../assets/Screenshot 2026-05-12 154122.png";
 import img5 from "../assets/Screenshot 2026-05-12 155310.png";
 import img6 from "../assets/Screenshot 2026-05-12 155700.png";
 import img7 from "../assets/Screenshot 2026-05-12 160457.png";
 import vangoImg from "../assets/vango.png";
 import medaiImg from "../assets/medai_dashboard.png";
+import roseCafeImg from "../assets/rose_cafe.png";
+import dailyBasketImg from "../assets/daily basket (1).png";
+import geoPulseImg from "../assets/geopulse.png";
+
 
 export const projectsData = [
   {
-    id: 9,
-    title: "Med AI Dashboard",
-    category: "Dashboard",
-    badgeLabel: "HEALTHCARE PORTAL",
-    role: "Lead Frontend Developer",
+    id: 11,
+    title: "Daily Basket",
+    category: "E-Commerce",
+    badgeLabel: "GROCERY STORE",
+    role: "Frontend Developer",
     description:
-      "A medical administration and user analytics platform designed for tracking doctor onboarding, pharmacy registrations, and patient growth telemetry.",
-    tags: ["#React", "#Chart.js", "#TailwindCSS", "#Redux"],
-    image: medaiImg,
-    githubLink: "https://github.com/Rakibboshunia/MedAi_Dashboard",
-    liveLink: "https://medai.watch/",
+      "A complete grocery e-commerce application featuring product filtering, cart management, and a seamless checkout experience.",
+    tags: ["#React", "#TailwindCSS", "#E-commerce"],
+    image: dailyBasketImg,
+    githubLink: "https://github.com/Rakibboshunia",
+    liveLink: "https://daily-basket-puce.vercel.app/",
     overview:
-      "Med AI is an administrative and telemetry portal designed for healthcare management. It allows monitoring active users, onboarded doctors, and pharmacy registrations, tracking patient growth trends and medication statistics with clean interactive graphs.",
+      "Daily Basket is a fully functional grocery store website that provides users with a dynamic shopping experience. It features an extensive product catalog, advanced filtering and sorting options, and a smooth checkout flow.",
     challenges:
-      "Building a highly interactive administration dashboard with statistics, custom user profile sliders, and data charts while keeping visual responsiveness flawless.",
+      "Implementing complex cart state management and advanced product filtering while maintaining a fast, responsive user interface across all devices.",
     solution:
-      "Implemented modular component design in React, Chart.js for clean analytics visualization, and a slide-out drawer pattern for editing profile information.",
-    technologies: ["React", "Chart.js", "Tailwind CSS", "Redux"],
+      "Leveraged React for robust state management and component reusability. Used Tailwind CSS to rapidly build a clean, modern, and highly responsive UI.",
+    technologies: ["React", "Tailwind CSS", "React Router"],
     features: [
-      "Dynamic onboarding metrics tracking for users, doctors, and pharmacies",
-      "Interactive data visualizations tracking user growth timelines",
-      "Monthly added medication summary indicators",
-      "Custom slide-out account profile manager and authentication panel"
+      "Advanced product filtering and sorting capabilities",
+      "Seamless shopping cart and checkout flow",
+      "Responsive design optimized for mobile and desktop",
+      "Dynamic product catalog with interactive UI components"
+    ]
+  },
+  {
+    id: 10,
+    title: "Rose Cafe & Restaurant",
+    category: "Landing Page",
+    badgeLabel: "PREMIUM CULINARY",
+    role: "Frontend Developer",
+    description:
+      "A premium interactive cafe and restaurant website featuring a dynamic digital menu, integrated reservation system, and fluid animations.",
+    tags: ["#React", "#TailwindCSS", "#FramerMotion"],
+    image: roseCafeImg,
+    githubLink: "https://github.com/Rakibboshunia/Rose_Cafe-Restaurent",
+    liveLink: "https://rose-cafe-restaurent.vercel.app/",
+    overview:
+      "Rose Cafe & Restaurant is an immersive digital dining experience. It features an interactive food and beverage menu showcase, direct reservation booking mechanisms, customer reviews integration, and highly aesthetic responsive sections reflecting the cozy, elegant ambiance of the cafe.",
+    challenges:
+      "Building a smooth, visually appealing cafe landing page with highly polished scrolling dynamics, interactive menu filters, and a reservation system that adapts perfectly to mobile screens.",
+    solution:
+      "Developed a custom React-based component hierarchy using Tailwind CSS for fluid layout control. Integrated Framer Motion for scroll-triggered micro-interactions and smooth fading animations, and optimized media assets for faster page load speeds.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion", "React Icons"],
+    features: [
+      "Interactive digital cafe and restaurant menu with filter categories",
+      "Dynamic table reservation form and validation flow",
+      "Smooth scroll-triggered animations mirroring the cozy dining aesthetic",
+      "Robust responsive grids optimized for mobile device screen layouts"
     ]
   },
   {
@@ -59,6 +87,110 @@ export const projectsData = [
       "Floating live stream dashboard metric overlays",
       "Vibrant, neon-glowing custom-themed waitlist signup",
       "Agile responsive CSS grids ensuring perfect 100% mobile adaptability"
+    ]
+  },
+  {
+    id: 4,
+    title: "Edukai Automation Engine",
+    category: "Dashboard",
+    badgeLabel: "AI & AUTOMATION",
+    role: "Full Frontend Engineer",
+    description:
+      "An AI-powered CV automation and recruitment dashboard system for monitoring real-time workflows and processing efficiency.",
+    tags: ["#React", "#Node.js", "#TailwindCSS"],
+    image: img4,
+    githubLink: "https://github.com/Rakibboshunia/EduKai",
+    liveLink: "https://edukaicvsub.edukai.co.uk/",
+    overview:
+      "Edukai is a sophisticated automation engine designed to streamline recruitment processes. It features a real-time dashboard for monitoring CV imports, quality checks, and submission success rates.",
+    challenges:
+      "Ensuring real-time data synchronization across various automation stages while maintaining a clean, intuitive interface for super admins to manage complex recruitment workflows.",
+    solution:
+      "Developed a robust dashboard using React with real-time state updates. Integrated data visualization for tracking success rates and processing metrics, ensuring high visibility into system performance.",
+    technologies: ["React", "Node.js", "Tailwind CSS"],
+    features: [
+      "Real-time recruitment processing telemetry tracking graphs",
+      "Highly-performant search & filtering engine for CV sorting",
+      "Visual draggable recruitment pipelines for dynamic progress updates",
+      "Robust CSV spreadsheet export integration"
+    ]
+  },
+  {
+    id: 5,
+    title: "Soundtrack My Night",
+    category: "Landing Page",
+    badgeLabel: "INTERACTIVE WEB",
+    role: "Interactive Developer",
+    description:
+      "A vibrant, high-energy landing page for an AI-powered Spotify playlist generator specifically designed for wedding events.",
+    tags: ["#React", "#SpotifyAPI", "#FramerMotion", "#TailwindCSS"],
+    image: img5,
+    githubLink: "https://github.com/Rakibboshunia/Rory_Music_Playlist",
+    liveLink: "https://soundtrackmynight.com/",
+    overview:
+      "Soundtrack My Night is a creative digital platform that helps couples generate the perfect wedding playlist. The site features a 60-second quiz and instant Spotify integration.",
+    challenges:
+      "Creating a visual identity that feels both celebratory and technologically advanced, while ensuring a smooth transition between the landing page and the interactive quiz component.",
+    solution:
+      "Implemented a high-contrast, vibrant color palette with smooth Framer Motion transitions. Optimized the mobile experience to ensure the quiz is easily accessible for users on the go.",
+    technologies: ["React", "Spotify API", "Framer Motion", "Tailwind CSS"],
+    features: [
+      "Engaging 60-second interactive playlist generator quiz",
+      "Robust client-side Spotify OAuth and Web API query pipelines",
+      "Highly aesthetic fluid transitions via Framer Motion triggers",
+      "Premium customized user data payload feedback forms"
+    ]
+  },
+  {
+    id: 12,
+    title: "GeoPulse",
+    category: "Web Application",
+    badgeLabel: "WORLD ATLAS",
+    role: "Frontend Developer",
+    description:
+      "An interactive World Atlas application providing detailed country information, search functionality, and a responsive glassmorphism UI.",
+    tags: ["#React", "#TailwindCSS", "#FramerMotion"],
+    image: geoPulseImg,
+    githubLink: "https://github.com/Rakibboshunia",
+    liveLink: "https://geopulse-ashy.vercel.app/",
+    overview:
+      "GeoPulse is a comprehensive World Atlas web application. It features a modern glassmorphism design, providing users with interactive country data, robust search interfaces, and fluid animations.",
+    challenges:
+      "Migrating a custom CSS architecture to Tailwind CSS while preserving complex glassmorphism effects and ensuring optimal cross-device responsiveness.",
+    solution:
+      "Transitioned the entire UI to Tailwind CSS v4, utilizing custom utility classes for glassmorphism. Integrated Framer Motion for smooth page transitions and interactive elements.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    features: [
+      "Interactive country search and filtering interface",
+      "Premium glassmorphism design with fluid animations",
+      "Comprehensive country details and geographical data",
+      "Fully responsive grid layouts across all devices"
+    ]
+  },
+  {
+    id: 9,
+    title: "Med AI Dashboard",
+    category: "Dashboard",
+    badgeLabel: "HEALTHCARE PORTAL",
+    role: "Lead Frontend Developer",
+    description:
+      "A medical administration and user analytics platform designed for tracking doctor onboarding, pharmacy registrations, and patient growth telemetry.",
+    tags: ["#React", "#Chart.js", "#TailwindCSS", "#Redux"],
+    image: medaiImg,
+    githubLink: "https://github.com/Rakibboshunia/MedAi_Dashboard",
+    liveLink: "https://medai.watch/",
+    overview:
+      "Med AI is an administrative and telemetry portal designed for healthcare management. It allows monitoring active users, onboarded doctors, and pharmacy registrations, tracking patient growth trends and medication statistics with clean interactive graphs.",
+    challenges:
+      "Building a highly interactive administration dashboard with statistics, custom user profile sliders, and data charts while keeping visual responsiveness flawless.",
+    solution:
+      "Implemented modular component design in React, Chart.js for clean analytics visualization, and a slide-out drawer pattern for editing profile information.",
+    technologies: ["React", "Chart.js", "Tailwind CSS", "Redux"],
+    features: [
+      "Dynamic onboarding metrics tracking for users, doctors, and pharmacies",
+      "Interactive data visualizations tracking user growth timelines",
+      "Monthly added medication summary indicators",
+      "Custom slide-out account profile manager and authentication panel"
     ]
   },
   {
@@ -114,58 +246,6 @@ export const projectsData = [
     ]
   },
   {
-    id: 5,
-    title: "Soundtrack My Night",
-    category: "Landing Page",
-    badgeLabel: "INTERACTIVE WEB",
-    role: "Interactive Developer",
-    description:
-      "A vibrant, high-energy landing page for an AI-powered Spotify playlist generator specifically designed for wedding events.",
-    tags: ["#React", "#SpotifyAPI", "#FramerMotion", "#TailwindCSS"],
-    image: img5,
-    githubLink: "https://github.com/Rakibboshunia/Rory_Music_Playlist",
-    liveLink: "https://soundtrackmynight.com/",
-    overview:
-      "Soundtrack My Night is a creative digital platform that helps couples generate the perfect wedding playlist. The site features a 60-second quiz and instant Spotify integration.",
-    challenges:
-      "Creating a visual identity that feels both celebratory and technologically advanced, while ensuring a smooth transition between the landing page and the interactive quiz component.",
-    solution:
-      "Implemented a high-contrast, vibrant color palette with smooth Framer Motion transitions. Optimized the mobile experience to ensure the quiz is easily accessible for users on the go.",
-    technologies: ["React", "Spotify API", "Framer Motion", "Tailwind CSS"],
-    features: [
-      "Engaging 60-second interactive playlist generator quiz",
-      "Robust client-side Spotify OAuth and Web API query pipelines",
-      "Highly aesthetic fluid transitions via Framer Motion triggers",
-      "Premium customized user data payload feedback forms"
-    ]
-  },
-  {
-    id: 4,
-    title: "Edukai Automation Engine",
-    category: "Dashboard",
-    badgeLabel: "AI & AUTOMATION",
-    role: "Full Frontend Engineer",
-    description:
-      "An AI-powered CV automation and recruitment dashboard system for monitoring real-time workflows and processing efficiency.",
-    tags: ["#React", "#Node.js", "#TailwindCSS"],
-    image: img4,
-    githubLink: "https://github.com/Rakibboshunia/EduKai",
-    liveLink: "https://edukaicvsub.edukai.co.uk/",
-    overview:
-      "Edukai is a sophisticated automation engine designed to streamline recruitment processes. It features a real-time dashboard for monitoring CV imports, quality checks, and submission success rates.",
-    challenges:
-      "Ensuring real-time data synchronization across various automation stages while maintaining a clean, intuitive interface for super admins to manage complex recruitment workflows.",
-    solution:
-      "Developed a robust dashboard using React with real-time state updates. Integrated data visualization for tracking success rates and processing metrics, ensuring high visibility into system performance.",
-    technologies: ["React", "Node.js", "Tailwind CSS"],
-    features: [
-      "Real-time recruitment processing telemetry tracking graphs",
-      "Highly-performant search & filtering engine for CV sorting",
-      "Visual draggable recruitment pipelines for dynamic progress updates",
-      "Robust CSV spreadsheet export integration"
-    ]
-  },
-  {
     id: 1,
     title: "OREBI E-Commerce",
     category: "E-Commerce",
@@ -189,58 +269,6 @@ export const projectsData = [
       "Global application state synchronization via Redux Toolkit slices",
       "Premium custom-designed item cards with smooth hover expansions",
       "High-performance instant search box listing hundreds of mock products"
-    ]
-  },
-  {
-    id: 2,
-    title: "Gericht Fine Dining",
-    category: "Landing Page",
-    badgeLabel: "LANDING PAGE",
-    role: "Creative UI Developer",
-    description:
-      "A visually stunning immersive web experience for high-end dining, focusing on elegant typography and smooth animations.",
-    tags: ["#React", "#CSS3", "#FramerMotion"],
-    image: img2,
-    githubLink: "https://github.com/Rakibboshunia",
-    liveLink: "https://gericht-restaurant.vercel.app/",
-    overview:
-      "Designed specifically for luxury clientele, the Gericht Fine Dining app relies heavily on visual storytelling, micro-animations, and striking high-contrast imagery to deliver a digital experience akin to fine dining.",
-    challenges:
-      "Managing excessive high-res imagery while keeping the website lightweight and guaranteeing fluid scrolling performance on mobile environments without stuttering.",
-    solution:
-      "Utilized Framer Motion for scroll-linked animations and lazy-loaded image assets. CSS variables were employed rigorously to ensure immediate theme adaptability.",
-    technologies: ["React", "CSS3", "Framer Motion", "Vite"],
-    features: [
-      "Splendid luxurious typographic storytelling pages",
-      "Sophisticated scroll-triggered animations mirroring fine dining",
-      "Ultra-fast asset lazy loading, minimizing layout shifts (CLS)",
-      "Premium custom video player overlays showcasing restaurant trailers"
-    ]
-  },
-  {
-    id: 3,
-    title: "UNIAO Agency",
-    category: "Landing Page",
-    badgeLabel: "LANDING PAGE",
-    role: "Creative Frontend Developer",
-    description:
-      "A bold, modern agency portfolio designed to showcase high-impact services and creative excellence.",
-    tags: ["#React", "#FramerMotion", "#TailwindCSS"],
-    image: img3,
-    githubLink: "https://github.com/Rakibboshunia",
-    liveLink: "https://uniao-agency.vercel.app/",
-    overview:
-      "The UNIAO Agency platform is developed to act as an authoritative digital footprint for an agency. Its bold typography and unorthodox grids echo the creative nature of the services offered.",
-    challenges:
-      "Translating chaotic and highly customized Figma designs into mathematically robust, responsive grids that wouldn't break on odd aspect ratios.",
-    solution:
-      "Created dynamic layout components using modern CSS Grid and Tailwind flex utilities to ensure mathematical precision without losing the creative edge. Nested animations provide additional flair.",
-    technologies: ["React", "Tailwind CSS", "Framer Motion", "Context API"],
-    features: [
-      "Asymmetric layouts styled with state-of-the-art CSS Grid",
-      "Fluid interactive sidebar navigation with spring motion physics",
-      "Dynamic client project showcase tabs with smooth slide transitions",
-      "Ultra-minimalist responsive contact card forms"
     ]
   }
 ];
