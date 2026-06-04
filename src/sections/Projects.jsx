@@ -50,6 +50,13 @@ const projectsData = [
   },
 ];
 
+import { ExternalLink, ArrowRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import SEOHelmet from "../components/common/SEOHelmet";
+import { Link } from "react-router-dom";
+import { projectsData } from "../data/projectsData";
+import SpotlightCard from "../components/common/SpotlightCard";
+
 const categories = ["All", "E-Commerce", "Landing Page", "Dashboard"];
 
 const Projects = () => {
@@ -61,99 +68,122 @@ const Projects = () => {
       : projectsData.filter((project) => project.category === activeCategory);
 
   return (
-    <section id="projects" className="py-24 px-6 bg-[#f8f9fa] dark:bg-[#0D0D0D] relative min-h-screen font-sans transition-colors duration-300">
-      {/* Background Glow similar to original */}
-      <div className="absolute w-[600px] h-[600px] bg-[#C9A96E]/5 blur-[150px] rounded-full top-0 left-1/2 -translate-x-1/2 pointer-events-none"></div>
+    <section
+      id="projects"
+      className="relative min-h-screen transition-colors duration-300 bg-transparent"
+    >
+      <SEOHelmet title="Projects | Boshunia" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header Section */}
-        <div className="text-center relative mb-16">
-          {/* Faded Background Text */}
-          <h1 className="absolute inset-0 flex items-center justify-center text-[10vw] font-bold text-[#C9A96E]/5 select-none z-0 tracking-widest mt-8 pointer-events-none">
-            PORTFOLIO
-          </h1>
-          
-          <h2 className="text-[#C9A96E] font-serif tracking-[0.3em] text-lg mb-12 mt-16 relative z-10 inline-block">
-            <span className="relative inline-block pb-2">
-              <span className="text-gray-900 dark:text-white">MY</span>
-              <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#C9A96E]"></span>
-            </span>{" "}
-            WORK
-          </h2>
+      {/* Header Section */}
+      <div className="max-w-7xl mx-auto px-6 pt-24 md:pt-32 pb-12 md:pb-20 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-12"
+        >
+          <div className="max-w-2xl">
+            <h2 className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs uppercase mb-6 block font-bold">
+              • Selected Works
+            </h2>
+            <h3 className="text-5xl md:text-7xl font-serif leading-none tracking-tighter">
+              Bespoke <br /> <span className="text-[#C9A96E]">Creations.</span>
+            </h3>
+          </div>
 
           {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-6 relative z-10 text-sm font-medium">
+          <div className="flex flex-wrap gap-4 text-xs font-bold uppercase tracking-widest">
             {categories.map((cat, i) => (
               <button
                 key={i}
                 onClick={() => setActiveCategory(cat)}
-                className={`relative pb-2 transition-colors ${
-                  activeCategory === cat ? "text-[#C9A96E]" : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-                }`}
+                className={`pb-2 border-b-2 transition-all duration-500 ${activeCategory === cat
+                    ? "border-[#C9A96E] text-[#C9A96E]"
+                    : "border-transparent text-gray-500 hover:text-gray-300"
+                  }`}
               >
                 {cat}
-                {activeCategory === cat && (
-                  <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#C9A96E]"></span>
-                )}
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
+      </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Beautiful Premium Grid (1 col on mobile, 2 col on tablet, 3 col on desktop) */}
+      <div className="max-w-7xl mx-auto px-6 pb-32 relative z-10">
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+        >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, i) => (
-              <motion.a
-                href={project.link}
-                key={project.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="bg-white dark:bg-[#151515] border border-gray-200 dark:border-white/5 hover:border-[#C9A96E]/30 dark:hover:border-[#C9A96E]/30 rounded-xl overflow-hidden group shadow-lg flex flex-col h-full hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
-              >
-                {/* Image Box */}
-                <div className="relative h-64 overflow-hidden rounded-t-xl">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/40 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                     <div className="w-12 h-12 bg-[#C9A96E] rounded-full flex items-center justify-center transition-transform transform md:scale-0 group-hover:scale-100 duration-300 delay-100">
-                        <ExternalLink size={20} className="text-black" />
-                     </div>
-                  </div>
-                </div>
-
-                {/* Content Box */}
-                <div className="p-6 flex-grow flex flex-col">
-                  <span className="text-xs font-semibold tracking-wider text-[#C9A96E] mb-3">
-                    {project.badgeLabel}
-                  </span>
-                  <h3 className="text-gray-900 dark:text-white text-xl font-medium mb-3 group-hover:text-[#C9A96E] transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow line-clamp-3">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    {project.tags.map((tag, index) => (
-                      <span key={index} className="text-[#C9A96E]/70 text-xs font-medium bg-[#C9A96E]/10 px-2 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.a>
+              <ProjectCard key={project.id} project={project} index={i} />
             ))}
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
+
+const ProjectCard = ({ project, index }) => (
+  <motion.div
+    layout
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, scale: 0.9 }}
+    transition={{ duration: 0.6, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
+    className="w-full h-full"
+  >
+    <SpotlightCard className="glass-card rounded-[2.5rem] overflow-hidden group border-white/5 h-full flex flex-col justify-between">
+      <div className="flex-grow">
+        <Link to={`/projects/${project.id}`} className="block relative aspect-[3/2] overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500"></div>
+
+          {/* Content Overlay */}
+          <div className="absolute bottom-6 left-8 right-8">
+            <span className="text-[10px] font-bold tracking-[0.3em] text-[#C9A96E] uppercase mb-2 block">
+              {project.category}
+            </span>
+            <h4 className="text-xl md:text-2xl font-serif text-white mb-4 group-hover:text-[#C9A96E] transition-colors">
+              {project.title}
+            </h4>
+            <div className="flex items-center gap-4 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500">
+              <span className="text-xs font-bold tracking-widest uppercase text-white">View Details</span>
+              <ArrowRight size={16} className="text-[#C9A96E]" />
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      <div className="py-6 px-8 flex gap-6 items-center border-t border-white/5 bg-neutral-900/10 dark:bg-black/10">
+        <a
+          href={project.githubLink}
+          target="_blank"
+          rel="noreferrer"
+          className="text-gray-500 hover:text-[#C9A96E] transition-colors"
+        >
+          <FaGithub size={20} />
+        </a>
+        <div className="w-[1px] h-6 bg-white/10"></div>
+        <p className="text-xs text-gray-500 line-clamp-1 flex-grow">
+          {project.description}
+        </p>
+        <a
+          href={project.liveLink}
+          target="_blank"
+          rel="noreferrer"
+          className="text-[#C9A96E]"
+        >
+          <ExternalLink size={20} />
+        </a>
+      </div>
+    </SpotlightCard>
+  </motion.div>
+);
 
 export default Projects;

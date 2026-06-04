@@ -1,104 +1,136 @@
+import { useRef } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import mypic from "../assets/boshunia.jpeg";
+import { ArrowRight, Play } from "lucide-react";
+import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA .pdf";
+import MagneticButton from "../components/common/MagneticButton";
+import heroImg from "../assets/boshunia-hero.jpg";
 
 const Hero = () => {
+  const containerRef = useRef(null);
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-[#f8f9fa] dark:bg-[#0D0D0D] px-6 overflow-hidden transition-colors duration-300">
+    <section 
+      id="home" 
+      ref={containerRef} 
+      className="relative min-h-screen md:h-screen bg-transparent flex flex-col justify-center overflow-hidden pt-28 pb-16 md:py-0"
+    >
+      {/* Container */}
+      <div className="relative w-full flex-grow flex flex-col md:block justify-center bg-transparent">
+        
+        {/* Text Content (Left Side on Desktop, Top on Mobile) */}
+        <div className="relative md:absolute md:inset-0 flex items-center pointer-events-none z-10 w-full px-6 md:px-0">
+          <div className="w-full max-w-7xl mx-auto pointer-events-auto">
+            <div className="w-full lg:w-3/5 flex flex-col items-start text-left will-change-[opacity,transform]">
+              
+              {/* 🟢 Availability Badge */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 md:mb-8 backdrop-blur-sm"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span className="text-[10px] font-bold tracking-[0.2em] text-white/70 uppercase">
+                  Available for new projects
+                </span>
+              </motion.div>
 
-      {/* 🔥 Ambient Glow Layers */}
-      <div className="absolute w-[700px] h-[700px] bg-[#C9A96E]/10 blur-[160px] rounded-full top-[-200px] left-1/2 -translate-x-1/2"></div>
-      <div className="absolute w-[300px] h-[300px] bg-[#C9A96E]/10 blur-[120px] rounded-full bottom-10 right-10"></div>
+              <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-4 md:mb-6 block font-bold shadow-black drop-shadow-md">
+                • Specialized in Frontend Excellence
+              </span>
+              
+              <h1 className="text-5xl md:text-8xl lg:text-[7rem] font-serif leading-[0.9] tracking-tighter mb-6 md:mb-8 drop-shadow-2xl mix-blend-lighten text-white">
+                Crafting <br />
+                <span className="text-[#C9A96E]">Digital</span> <br />
+                Masterpieces.
+              </h1>
 
-      {/* ✨ Noise Layer */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+              <p className="text-gray-300 text-base md:text-xl max-w-xl mb-8 md:mb-12 drop-shadow-lg font-medium">
+                I build high-performance, visually striking web applications that
+                bridge the gap between complex engineering and pure aesthetic.
+              </p>
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center relative z-10">
+              <div className="flex flex-wrap gap-6 md:gap-8 items-center">
+                <MagneticButton>
+                  <a
+                    href={cvFile}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group relative px-8 py-4 bg-[#C9A96E] text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105 flex items-center gap-3 shadow-xl"
+                  >
+                    <span>GET RESUME</span>
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </MagneticButton>
 
-        {/* LEFT CONTENT */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-
-          {/* Tag */}
-          <span className="text-xs tracking-[0.4em] text-[#C9A96E] uppercase">
-            Digital Product Designer
-          </span>
-
-          {/* Heading */}
-          <h1 className="text-5xl md:text-7xl font-serif text-gray-900 dark:text-white leading-[1.1] mt-6">
-            I build clean & <br />
-            <span className="bg-gradient-to-r from-[#C9A96E] via-white to-[#C9A96E] text-transparent bg-clip-text">
-              premium interfaces
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="text-gray-600 dark:text-gray-400 mt-8 max-w-lg leading-relaxed text-lg">
-            Focused on crafting modern, high-performance web experiences with
-            strong design systems, smooth interactions, and scalable architecture.
-          </p>
-
-          {/* CTA */}
-          <div className="mt-12 flex gap-5">
-
-            <Link to="/contact" className="px-8 py-3 flex items-center justify-center rounded-md bg-[#C9A96E] text-black font-medium tracking-wide hover:opacity-90 transition">
-              Start Project
-            </Link>
-
-            <Link to="/projects" className="px-8 py-3 flex items-center justify-center rounded-md border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-black transition">
-              View Work
-            </Link>
-
+                <button className="flex items-center gap-4 text-sm font-bold tracking-widest uppercase hover:text-[#C9A96E] transition-colors group text-white">
+                  <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:border-[#C9A96E] transition-colors bg-black/20 backdrop-blur-sm">
+                    <Play size={14} fill="currentColor" />
+                  </div>
+                  View Showreel
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
 
-          {/* Trust Strip */}
-          <div className="flex gap-10 mt-14 text-sm text-gray-500">
-            <span>Trusted by startups</span>
-            <span>•</span>
-            <span>Remote worldwide</span>
-          </div>
+        {/* Interactive Premium Portrait Container (Right Side on Desktop, Bottom on Mobile) */}
+        <div className="relative md:absolute md:top-1/2 md:-translate-y-1/2 right-0 md:right-[5%] w-full md:w-[34vw] h-[55vh] md:h-[75vh] z-0 flex items-center justify-center px-6 md:px-0 mt-12 md:mt-0">
+          
+          {/* Subtle Ambient Radial Glow */}
+          <div className="absolute -inset-10 bg-gradient-to-tr from-[#C9A96E]/15 via-transparent to-transparent rounded-[4rem] blur-3xl opacity-60 pointer-events-none z-0" />
 
-        </motion.div>
-
-        {/* RIGHT VISUAL */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="flex justify-center md:justify-end"
-        >
-
-          <div className="relative">
-
-            {/* Image */}
-            <img
-              src={mypic}
-              className="w-[360px] md:w-[400px] rounded-3xl object-cover"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="relative w-full h-full rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-white/10 shadow-[0_0_60px_rgba(0,0,0,0.8)] bg-neutral-950/20 backdrop-blur-sm group z-10 hover:border-[#C9A96E]/30 transition-all duration-700"
+          >
+            {/* Elegant Grayscale to Color Image with Hover Zoom */}
+            <motion.img
+              src={heroImg}
+              alt="Rakib Boshunia"
+              className="w-full h-full object-cover transition-all duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
             />
 
-            {/* Soft Glass Overlay */}
-            <div className="absolute inset-0 rounded-3xl bg-gray-200/20 dark:bg-white/5 border border-gray-300 dark:border-white/10"></div>
+            {/* Premium Gold Lighting Overlay on Hover */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none" />
+            <div className="absolute inset-0 bg-[#C9A96E]/5 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-            {/* Accent Frame */}
-            <div className="absolute -bottom-6 -right-6 w-full h-full border border-[#C9A96E]/30 rounded-3xl"></div>
+            {/* Floating Premium Badge */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute bottom-6 left-5 right-5 md:bottom-8 md:left-8 md:right-8 bg-neutral-900/80 border border-white/10 backdrop-blur-xl p-4 md:p-6 rounded-3xl flex items-center justify-between shadow-2xl translate-y-0 group-hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            >
+              <div>
+                <h4 className="text-white font-serif text-sm md:text-base tracking-wider mb-1">Al-Rakeb Boshunia</h4>
+                <p className="text-[9px] md:text-[10px] text-[#C9A96E] font-bold tracking-[0.25em] uppercase">Frontend Architect</p>
+              </div>
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:border-[#C9A96E] group-hover:text-[#C9A96E] transition-all duration-500 bg-white/5">
+                <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </motion.div>
+          </motion.div>
 
-          </div>
+          {/* Subtle responsive side fading overlay for desktop only */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-90 pointer-events-none hidden md:block z-20"></div>
+        </div>
 
-        </motion.div>
-
-      </div>
-
-      {/* ⬇ Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-500">
-        <span className="text-xs tracking-widest">SCROLL</span>
-        <div className="w-[2px] h-12 bg-gray-300 dark:bg-gray-700 mt-2 relative overflow-hidden">
-          <span className="absolute top-0 w-full h-3 bg-[#C9A96E] animate-bounce"></span>
+        {/* Scroll Background Text */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none opacity-[0.04] z-[-1]">
+          <h2 className="text-[18vw] font-serif leading-none whitespace-nowrap text-center -mb-5 md:-mb-10 text-white font-bold tracking-tighter">
+            DEVELOPER DESIGNER
+          </h2>
         </div>
       </div>
-
     </section>
   );
 };
