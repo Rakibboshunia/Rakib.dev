@@ -5,8 +5,19 @@ import { ExternalLink } from "lucide-react";
 import img1 from "../assets/E-com.jpg";
 import img2 from "../assets/landing page.webp";
 import img3 from "../assets/dashboard.webp";
+import img4 from "../assets/saas.webp";
 
 const projectsData = [
+  {
+    id: 4,
+    title: "EduNest",
+    category: "Dashboard",
+    badgeLabel: "SAAS PLATFORM",
+    description: "The Modern OS for Educational Excellence. Streamline operations, boost student engagement, and gain powerful insights.",
+    tags: ["#React", "#TailwindCSS", "#Vite"],
+    image: img4,
+    link: "https://edu-nest-eta.vercel.app/",
+  },
   {
     id: 1,
     title: "OREBI E-Commerce",
