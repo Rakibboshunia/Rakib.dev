@@ -1,54 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink } from "lucide-react";
-
-import img1 from "../assets/E-com.jpg";
-import img2 from "../assets/landing page.webp";
-import img3 from "../assets/dashboard.webp";
-import img4 from "../assets/saas.webp";
-
-const projectsData = [
-  {
-    id: 4,
-    title: "EduNest",
-    category: "Dashboard",
-    badgeLabel: "SAAS PLATFORM",
-    description: "The Modern OS for Educational Excellence. Streamline operations, boost student engagement, and gain powerful insights.",
-    tags: ["#React", "#TailwindCSS", "#Vite"],
-    image: img4,
-    link: "https://edu-nest-eta.vercel.app/",
-  },
-  {
-    id: 1,
-    title: "OREBI E-Commerce",
-    category: "E-Commerce",
-    badgeLabel: "E-COMMERCE",
-    description: "A premium e-commerce platform featuring complex filtering, cart management, and a high-performance architecture.",
-    tags: ["#React", "#TailwindCSS", "#Redux"],
-    image: img1,
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "Gericht Fine Dining",
-    category: "Landing Page",
-    badgeLabel: "LANDING PAGE",
-    description: "A visually stunning immersive web experience for high-end dining, focusing on elegant typography and smooth animations.",
-    tags: ["#React", "#CSS3", "#FramerMotion"],
-    image: img2,
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "UNIAO Agency",
-    category: "Landing Page",
-    badgeLabel: "LANDING PAGE",
-    description: "A bold, modern agency portfolio designed to showcase high-impact services and creative excellence.",
-    tags: ["#React", "#FramerMotion", "#Tailwind"],
-    image: img3,
-    link: "#",
-  },
-];
 
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";

@@ -1,4 +1,5 @@
 import img1 from "../assets/E-com.jpg";
+import saasImg from "../assets/saas.webp";
 import img4 from "../assets/Screenshot 2026-05-12 154122.png";
 import img5 from "../assets/Screenshot 2026-05-12 155310.png";
 import img6 from "../assets/Screenshot 2026-05-12 155700.png";
@@ -11,6 +12,28 @@ import geoPulseImg from "../assets/geopulse.png";
 
 
 export const projectsData = [
+  {
+    id: 13,
+    title: "EduNest",
+    category: "Dashboard",
+    badgeLabel: "SAAS PLATFORM",
+    role: "Full Stack Developer",
+    description: "The Modern OS for Educational Excellence. Streamline operations, boost student engagement, and gain powerful insights.",
+    tags: ["#React", "#TailwindCSS", "#Vite"],
+    image: saasImg,
+    githubLink: "https://github.com/Rakibboshunia/EduNest",
+    liveLink: "https://edu-nest-eta.vercel.app/",
+    overview: "EduNest is a comprehensive school management system with an admin portal, student tracking, and analytics. It provides actionable insights with a beautiful and dynamic design.",
+    challenges: "Building a highly performant and intuitive dashboard for educational administration while keeping the interface extremely user-friendly and aesthetically pleasing.",
+    solution: "Used React and Vite for a fast single page application experience, and implemented a custom premium design system using Tailwind CSS.",
+    technologies: ["React", "Tailwind CSS", "Vite", "Framer Motion"],
+    features: [
+      "Dynamic admin dashboard with key metrics and analytics",
+      "Student tracking and attendance monitoring",
+      "Premium, beautiful glassmorphism-inspired interface",
+      "Lightning fast interactions and navigation"
+    ]
+  },
   {
     id: 11,
     title: "Daily Basket",
