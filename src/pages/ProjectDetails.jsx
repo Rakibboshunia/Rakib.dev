@@ -1,4 +1,3 @@
-
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -31,9 +30,6 @@ const ProjectDetails = () => {
 
   if (!project) return null;
 
-  // Determine what URL to display in the mockup address bar:
-  // If the project has a real live link (and it's not "#"), show it.
-  // Otherwise, show a nice premium demo URL.
   const displayUrl = project.liveLink && project.liveLink !== "#"
     ? project.liveLink
     : `https://demo.boshunia.dev/${project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
