@@ -1,3 +1,4 @@
+
 import img1 from "../assets/E-com.jpg";
 import saasImg from "../assets/saas.webp";
 import img4 from "../assets/Screenshot 2026-05-12 154122.png";
@@ -13,27 +14,57 @@ import geoPulseImg from "../assets/geopulse.png";
 
 export const projectsData = [
   {
-    id: 13,
-    title: "EduNest",
-    category: "Dashboard",
-    badgeLabel: "SAAS PLATFORM",
-    role: "Full Stack Developer",
-    description: "The Modern OS for Educational Excellence. Streamline operations, boost student engagement, and gain powerful insights.",
-    tags: ["#React", "#TailwindCSS", "#Vite"],
-    image: saasImg,
-    githubLink: "https://github.com/Rakibboshunia/EduNest",
-    liveLink: "https://edu-nest-eta.vercel.app/",
-    overview: "EduNest is a comprehensive school management system with an admin portal, student tracking, and analytics. It provides actionable insights with a beautiful and dynamic design.",
-    challenges: "Building a highly performant and intuitive dashboard for educational administration while keeping the interface extremely user-friendly and aesthetically pleasing.",
-    solution: "Used React and Vite for a fast single page application experience, and implemented a custom premium design system using Tailwind CSS.",
-    technologies: ["React", "Tailwind CSS", "Vite", "Framer Motion"],
-    features: [
-      "Dynamic admin dashboard with key metrics and analytics",
-      "Student tracking and attendance monitoring",
-      "Premium, beautiful glassmorphism-inspired interface",
-      "Lightning fast interactions and navigation"
+  id: 13,
+  title: "EduNest",
+  category: "Dashboard",
+  badgeLabel: "SAAS PLATFORM",
+  role: "Frontend Developer",
+
+  description:
+    "EduNest is a modern SaaS-based education management platform designed to help schools and educational institutions streamline administration, monitor student performance, track attendance, and make data-driven decisions through a powerful analytics dashboard.",
+
+  overview:
+    "EduNest was built to modernize the way educational institutions manage their daily operations. Traditional school management systems often suffer from outdated interfaces, poor user experience, and limited accessibility. EduNest addresses these issues by providing a clean, intuitive, and highly interactive dashboard that allows administrators, teachers, and staff to access important information efficiently. The platform combines modern UI design principles with real-time data visualization to create a seamless management experience.",
+
+  challenges:
+    "One of the biggest challenges was organizing large amounts of educational data without overwhelming users. School administrators need access to attendance records, student information, performance metrics, and operational insights all in one place. Designing a dashboard that remained visually clean while presenting complex information required careful planning. Another challenge was maintaining smooth performance and responsiveness across different devices while implementing advanced UI effects and animations.",
+
+  solution:
+    "The platform was developed using React and Vite to ensure a fast and scalable frontend architecture. A reusable component-based system was created to maintain consistency across the application. Tailwind CSS was used to build a modern design system featuring glassmorphism-inspired elements, responsive layouts, and accessible user interfaces. Framer Motion was integrated to deliver smooth page transitions and interactive micro-animations, enhancing the overall user experience. Data presentation was carefully structured through cards, charts, tables, and visual indicators to improve readability and decision-making.",
+
+  businessImpact:
+    "EduNest demonstrates how modern frontend technologies can transform traditional educational management systems into engaging and efficient digital experiences. The platform improves information accessibility, reduces administrative complexity, and enables stakeholders to gain valuable insights through data visualization and streamlined workflows.",
+
+  technologies: [
+    "React",
+    "Tailwind CSS",
+    "Vite",
+    "Framer Motion"
+  ],
+
+  features: [
+    "Advanced analytics dashboard with educational insights",
+    "Student management and profile overview system",
+    "Attendance tracking and monitoring interface",
+    "Performance analytics with visual reporting",
+    "Interactive charts and statistical data visualization",
+    "Responsive design optimized for all screen sizes",
+    "Modern SaaS-inspired glassmorphism UI",
+    "Reusable and scalable component architecture",
+    "Smooth animations and page transitions",
+    "Fast-loading single-page application experience",
+    "Clean navigation and intuitive user workflows",
+    "Premium user experience focused on usability and accessibility"
+  ],
+
+  results:
+    [
+      "Improved user accessibility through a simplified dashboard experience",
+      "Enhanced data visibility using modern visualization techniques",
+      "Created a scalable frontend architecture for future expansion",
+      "Delivered a professional SaaS-level user interface and experience"
     ]
-  },
+}
   {
     id: 11,
     title: "Daily Basket",
