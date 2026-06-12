@@ -64,7 +64,7 @@ export const projectsData = [
       "Created a scalable frontend architecture for future expansion",
       "Delivered a professional SaaS-level user interface and experience"
     ]
-}
+  },
   {
     id: 11,
     title: "Daily Basket",
