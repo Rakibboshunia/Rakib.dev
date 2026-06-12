@@ -23,6 +23,25 @@ const socials = [
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSending, setIsSending] = useState(false);
+  const [sendCount, setSendCount] = useState(() => {
+    const count = parseInt(localStorage.getItem("msgCount") || "0", 10);
+    const lastSent = parseInt(localStorage.getItem("msgTimestamp") || "0", 10);
+    if (count >= 2 && Date.now() - lastSent > 3600000) {
+      localStorage.setItem("msgCount", "0");
+      return 0;
+    }
+    return count;
+  });
+
+  const isMeaningful = (text) => {
+    if (/(.)\1{4,}/.test(text)) return false; // Prevents "aaaaa" or "!!!!!"
+    const words = text.trim().split(/\s+/).filter(Boolean);
+    const hasLongMashedWord = words.some(word => word.length > 25 && !word.includes("http")); // Prevents "asdfghjklqwertyuiopzxcvbnm"
+    if (hasLongMashedWord) return false;
+    const uniqueWords = new Set(words.map(w => w.toLowerCase()));
+    if (words.length > 5 && (uniqueWords.size / words.length) < 0.4) return false; // Prevents "hello hello hello hello"
+    return true;
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,6 +51,31 @@ const Contact = () => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       toast.error("Please fill out all fields.");
+      return;
+    }
+
+    let currentCount = sendCount;
+    if (currentCount >= 2) {
+      const lastSent = parseInt(localStorage.getItem("msgTimestamp") || "0", 10);
+      if (Date.now() - lastSent > 3600000) { // 1 hour passed
+        currentCount = 0;
+        setSendCount(0);
+        localStorage.setItem("msgCount", "0");
+      } else {
+        const remainingMinutes = Math.ceil((3600000 - (Date.now() - lastSent)) / 60000);
+        toast.error(`Message limit reached. Please try again in ${remainingMinutes} minutes.`);
+        return;
+      }
+    }
+
+    const wordCount = formData.message.trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount < 10) {
+      toast.error("Message must be at least 10 words long.");
+      return;
+    }
+
+    if (!isMeaningful(formData.message)) {
+      toast.error("Please write a meaningful message. Spam is not allowed.");
       return;
     }
 
@@ -53,6 +97,10 @@ const Contact = () => {
       .then((response) => {
         toast.success("Message sent successfully!", { id: toastId });
         setFormData({ name: "", email: "", message: "" });
+        const newCount = currentCount + 1;
+        setSendCount(newCount);
+        localStorage.setItem("msgCount", newCount.toString());
+        localStorage.setItem("msgTimestamp", Date.now().toString());
         setIsSending(false);
       })
       .catch((err) => {

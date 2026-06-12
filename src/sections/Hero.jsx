@@ -93,7 +93,7 @@ const Hero = () => {
             <motion.img
               src={heroImg}
               alt="Rakib Boshunia"
-              className="w-full h-full object-cover transition-all duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+              className="w-full h-full object-cover object-top transition-all duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
               initial={{ scale: 1.1, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
@@ -125,9 +125,9 @@ const Hero = () => {
         </div>
 
         {/* Scroll Background Text */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none opacity-[0.04] z-[-1]">
-          <h2 className="text-[18vw] font-serif leading-none whitespace-nowrap text-center -mb-5 md:-mb-10 text-white font-bold tracking-tighter">
-            DEVELOPER DESIGNER
+        <div className="absolute bottom-10 md:bottom-[15%] left-1/2 -translate-x-1/2 w-full overflow-hidden pointer-events-none select-none opacity-[0.03] z-[-1]">
+          <h2 className="text-[14vw] md:text-[10vw] font-serif leading-none whitespace-nowrap text-center text-white font-bold tracking-tighter">
+            DEVELOPER
           </h2>
         </div>
       </div>

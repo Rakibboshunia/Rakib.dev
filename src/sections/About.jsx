@@ -49,7 +49,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-16 md:py-24 px-6 relative overflow-hidden transition-colors duration-300"
+      className="py-12 md:py-16 px-6 relative overflow-hidden transition-colors duration-300"
     >
       <SEOHelmet title="About | Boshunia" />
 
@@ -58,7 +58,7 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-24"
+          className="mb-12 md:mb-16"
         >
           <h2 className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs uppercase mb-6 block font-bold">
             • The Narrative
@@ -68,7 +68,7 @@ const About = () => {
           </h3>
         </motion.div>
 
-        <div className="grid lg:grid-cols-12 gap-20 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* 🖼 Image Section - 5 columns */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -80,7 +80,7 @@ const About = () => {
               <img
                 src={mypic}
                 alt="Rakib Boshunia"
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
             </div>
@@ -104,12 +104,12 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-7"
           >
-            <h3 className="text-3xl md:text-5xl mb-10 leading-tight font-serif tracking-tight">
+            <h3 className="text-3xl md:text-5xl mb-6 leading-tight font-serif tracking-tight">
               Engineering <span className="text-[#C9A96E]">impactful</span> <br />
               digital ecosystems.
             </h3>
 
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-lg mb-16 max-w-xl">
+            <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-lg mb-8 max-w-xl">
               I specialize in bridging the gap between complex backend logic and
               seamless frontend interfaces. My approach is rooted in clean code,
               scalable architecture, and a relentless pursuit of visual perfection.
@@ -119,13 +119,13 @@ const About = () => {
             </p>
 
             {/* 📊 Stats Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
               {stats.map((stat, i) => (
                 <SpotlightCard key={i} className="glass-card p-10 rounded-3xl text-center border-white/5">
                   <div className="text-[#C9A96E] text-4xl font-serif mb-2">
                     <Counter end={stat.value} duration={3} suffix={stat.suffix} />
                   </div>
-                  <div className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-40">{stat.label}</div>
+                  <div className="text-[10px] tracking-[0.4em] uppercase font-bold text-gray-400">{stat.label}</div>
                 </SpotlightCard>
               ))}
             </div>

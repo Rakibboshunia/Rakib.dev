@@ -12,11 +12,14 @@ const categories = ["All", "E-Commerce", "Landing Page", "Dashboard"];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [showAll, setShowAll] = useState(false);
 
   const filteredProjects =
     activeCategory === "All"
       ? projectsData
       : projectsData.filter((project) => project.category === activeCategory);
+
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
   return (
     <section
@@ -46,7 +49,10 @@ const Projects = () => {
             {categories.map((cat, i) => (
               <button
                 key={i}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => {
+                  setActiveCategory(cat);
+                  setShowAll(false);
+                }}
                 className={`pb-2 border-b-2 transition-all duration-500 ${activeCategory === cat
                     ? "border-[#C9A96E] text-[#C9A96E]"
                     : "border-transparent text-gray-500 hover:text-gray-300"
@@ -66,11 +72,27 @@ const Projects = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, i) => (
+            {displayedProjects.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {filteredProjects.length > 3 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="flex justify-center mt-16"
+          >
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="group relative px-8 py-4 bg-transparent border border-[#C9A96E] text-[#C9A96E] font-bold rounded-full overflow-hidden transition-all hover:bg-[#C9A96E] hover:text-black flex items-center gap-3"
+            >
+              <span>{showAll ? "Show Less" : "View All Works"}</span>
+              <ArrowRight size={18} className={`transition-transform ${showAll ? '-rotate-90' : 'group-hover:translate-x-1'}`} />
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );

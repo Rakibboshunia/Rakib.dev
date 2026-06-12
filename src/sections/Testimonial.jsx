@@ -6,6 +6,7 @@ import img1 from "../assets/review/pic1.jpg";
 import img2 from "../assets/review/pic2.jpg";
 import img3 from "../assets/review/pic3.jpg";
 import img4 from "../assets/review/pic4.webp";
+import img5 from "../assets/RoryClark-BCrJ2eiS.jpeg";
 
 const data = [
   {
@@ -35,6 +36,13 @@ const data = [
     image: img4,
     text: "Rakib has an incredible eye for design. His work gave our brand a premium and modern identity.",
     project: "Brand Identity"
+  },
+  {
+    name: "Rory Clark",
+    role: "Founder, Soundtrack My Night",
+    image: img5,
+    text: "Rakib delivered an incredible web application for Soundtrack My Night. His design aesthetics and frontend engineering skills are absolutely top-notch.",
+    project: "Soundtrack My Night"
   },
 ];
 

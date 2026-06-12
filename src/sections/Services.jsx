@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SEOHelmet from "../components/common/SEOHelmet";
+import MagneticButton from "../components/common/MagneticButton";
 import {
   FaPenNib,
   FaCode,
@@ -62,6 +64,9 @@ const services = [
 ];
 
 const Services = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedServices = showAll ? services : services.slice(0, 4);
+
   return (
     <>
       <section id="services" className="py-16 md:py-24 px-6 bg-[#f8f9fa] dark:bg-[#0D0D0D] relative overflow-hidden transition-colors duration-300">
@@ -84,9 +89,9 @@ const Services = () => {
           </div>
 
           {/* Grid */}
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
 
-            {services.map((service, i) => {
+            {displayedServices.map((service, i) => {
               const serviceNumber = String(i + 1).padStart(2, "0");
               return (
                 <motion.div
@@ -134,6 +139,18 @@ const Services = () => {
               );
             })}
 
+          </div>
+
+          {/* Toggle Button */}
+          <div className="flex justify-center mt-12">
+            <MagneticButton>
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="px-8 py-3 md:px-10 md:py-4 border border-[#C9A96E] text-[#C9A96E] hover:bg-[#C9A96E] hover:text-black font-bold rounded-full transition-all tracking-wider text-xs md:text-sm flex items-center gap-2"
+              >
+                {showAll ? "SHOW LESS" : "VIEW ALL SERVICES"}
+              </button>
+            </MagneticButton>
           </div>
 
         </div>
