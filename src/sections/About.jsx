@@ -115,8 +115,8 @@ const About = () => {
               seamless frontend interfaces. My approach is rooted in clean code,
               scalable architecture, and a relentless pursuit of visual perfection.
               <br /><br />
-              Currently focused on evolving my stack with advanced Node.js integrations
-              and state-of-the-art interactive design patterns.
+              Currently focused on evolving my stack with advanced Node.js integrations,
+              custom WordPress solutions, and state-of-the-art interactive design patterns.
             </p>
 
             {/* 📊 Stats Grid */}
@@ -135,8 +135,7 @@ const About = () => {
               <MagneticButton>
                 <a
                   href={cvFile}
-                  target="_blank"
-                  rel="noreferrer"
+                  download="MD_AL_RAKEB_RASEL_BOSHUNIA_CV.pdf"
                   className="px-12 py-5 bg-[#C9A96E] text-black font-bold rounded-full hover:shadow-[0_20px_40px_rgba(201,169,110,0.3)] transition-all tracking-wider"
                 >
                   DOWNLOAD RESUME

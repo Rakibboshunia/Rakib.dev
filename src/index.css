@@ -2,13 +2,38 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ── Global Font Variables ── */
+:root {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ── Base Typography ── */
+html {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
+  font-family: var(--font-body);
   @apply bg-gray-50 text-gray-900 overflow-x-hidden transition-colors duration-300 dark:bg-[#0D0D0D] dark:text-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Override Tailwind's font-serif utility → Space Grotesk */
+.font-serif {
+  font-family: var(--font-heading) !important;
 }
 
 button {
   @apply cursor-pointer;
+  font-family: var(--font-body);
 }
+
 
 /* Custom Premium Scrollbar */
 ::-webkit-scrollbar {

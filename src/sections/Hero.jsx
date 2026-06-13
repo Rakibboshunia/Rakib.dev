@@ -10,19 +10,19 @@ const Hero = () => {
   const containerRef = useRef(null);
 
   return (
-    <section 
-      id="home" 
-      ref={containerRef} 
+    <section
+      id="home"
+      ref={containerRef}
       className="relative min-h-screen md:h-screen bg-transparent flex flex-col justify-center overflow-hidden pt-28 pb-16 md:py-0"
     >
       {/* Container */}
-      <div className="relative w-full flex-grow flex flex-col md:block justify-center bg-transparent">
-        
-        {/* Text Content (Left Side on Desktop, Top on Mobile) */}
-        <div className="relative md:absolute md:inset-0 flex items-center pointer-events-none z-10 w-full px-6 md:px-0">
+      <div className="relative w-full flex-grow flex flex-col md:block justify-center bg-transparent gap-12 md:gap-0">
+
+        {/* Text Content (Left Side on Desktop/Tablet, Top on Mobile) */}
+        <div className="relative md:absolute md:inset-0 flex items-center pointer-events-none z-10 w-full px-6 md:px-8 lg:px-6">
           <div className="w-full max-w-7xl mx-auto pointer-events-auto">
-            <div className="w-full lg:w-3/5 flex flex-col items-start text-left will-change-[opacity,transform]">
-              
+            <div className="w-full md:w-[55%] lg:w-3/5 flex flex-col items-start text-left will-change-[opacity,transform]">
+
               {/* 🟢 Availability Badge */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -42,8 +42,8 @@ const Hero = () => {
               <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-4 md:mb-6 block font-bold shadow-black drop-shadow-md">
                 • Specialized in Frontend Excellence
               </span>
-              
-              <h1 className="text-5xl md:text-8xl lg:text-[7rem] font-serif leading-[0.9] tracking-tighter mb-6 md:mb-8 drop-shadow-2xl mix-blend-lighten text-white">
+
+              <h1 className="text-5xl md:text-6xl lg:text-[7rem] font-serif leading-[0.9] tracking-tighter mb-6 md:mb-8 drop-shadow-2xl mix-blend-lighten text-white">
                 Crafting <br />
                 <span className="text-[#C9A96E]">Digital</span> <br />
                 Masterpieces.
@@ -78,9 +78,9 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Interactive Premium Portrait Container (Right Side on Desktop, Bottom on Mobile) */}
-        <div className="relative md:absolute md:top-1/2 md:-translate-y-1/2 right-0 md:right-[5%] w-full md:w-[34vw] h-[55vh] md:h-[75vh] z-0 flex items-center justify-center px-6 md:px-0 mt-12 md:mt-0">
-          
+        {/* Interactive Premium Portrait Container (Right Side on Desktop/Tablet, Bottom on Mobile) */}
+        <div className="relative md:absolute md:top-1/2 md:-translate-y-1/2 right-0 md:right-[2%] lg:right-[5%] w-full md:w-[42vw] lg:w-[34vw] h-[55vh] md:h-[65vh] lg:h-[75vh] mx-auto md:mx-0 z-0 flex items-center justify-center px-6 md:px-0 mt-8 md:mt-0">
+
           {/* Subtle Ambient Radial Glow */}
           <div className="absolute -inset-10 bg-gradient-to-tr from-[#C9A96E]/15 via-transparent to-transparent rounded-[4rem] blur-3xl opacity-60 pointer-events-none z-0" />
 
@@ -121,7 +121,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Subtle responsive side fading overlay for desktop only */}
+          {/* Subtle responsive side fading overlay for desktop/tablet only */}
           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-90 pointer-events-none hidden md:block z-20"></div>
         </div>
 

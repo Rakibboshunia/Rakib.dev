@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import SEOHelmet from "../components/common/SEOHelmet";
 
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaWordpress, FaElementor } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiJavascript, SiTailwindcss, SiNextdotjs, SiBootstrap } from "react-icons/si";
 
 const mernSkills = [
@@ -16,6 +16,8 @@ const mernSkills = [
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "Express.js", icon: <SiExpress /> },
   { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "WordPress", icon: <FaWordpress /> },
+  { name: "Elementor Pro", icon: <FaElementor /> },
 ];
 
 const experiences = [
@@ -26,10 +28,10 @@ const experiences = [
     desc: "Developing and deploying frontend web applications, e-commerce platforms, and interactive user interfaces.",
   },
   {
-    role: "Frontend Developer",
+    role: "Frontend & WordPress Developer",
     company: "Freelance",
     year: "2024 - 2025",
-    desc: "Specialized in building responsive frontend architectures using React, Next.js, and Tailwind CSS with a focus on web performance.",
+    desc: "Specialized in building responsive frontend architectures using React/Next.js and developing full-stack custom WordPress solutions.",
   },
   {
     role: "Designer For POD (print on demand) Store",
@@ -42,7 +44,7 @@ const experiences = [
 const education = [
   {
     degree: "B.Sc in Computer Science & Engineering",
-    institution: "Daffodil International University",
+    institution: "Dhaka International University",
     year: "2021 - 2025",
     desc: "Focused on software engineering, data structures, and modern web architectures.",
   }

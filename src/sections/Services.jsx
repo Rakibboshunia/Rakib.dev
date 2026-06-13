@@ -109,33 +109,33 @@ const Services = () => {
                     {serviceNumber}
                   </span>
 
-                {/* Glow */}
-                <div className="absolute inset-0 bg-[#C9A96E]/5 opacity-0 group-hover:opacity-100 blur-2xl transition"></div>
+                  {/* Glow */}
+                  <div className="absolute inset-0 bg-[#C9A96E]/5 opacity-0 group-hover:opacity-100 blur-2xl transition"></div>
 
-                {/* Icon */}
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#C9A96E]/10 text-[#C9A96E] text-xl mb-6 group-hover:scale-110 transition">
-                  {service.icon}
-                </div>
+                  {/* Icon */}
+                  <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#C9A96E]/10 text-[#C9A96E] text-xl mb-6 group-hover:scale-110 transition">
+                    {service.icon}
+                  </div>
 
-                {/* Title */}
-                <h3 className="text-xl text-gray-900 dark:text-white mb-4 group-hover:text-[#C9A96E] transition">
-                  {service.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="text-xl text-gray-900 dark:text-white mb-4 group-hover:text-[#C9A96E] transition">
+                    {service.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  {service.desc}
-                </p>
+                  {/* Description */}
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    {service.desc}
+                  </p>
 
-                {/* Divider */}
-                <div className="w-0 h-[1px] bg-[#C9A96E] mt-8 group-hover:w-full transition-all duration-500"></div>
+                  {/* Divider */}
+                  <div className="w-0 h-[1px] bg-[#C9A96E] mt-8 group-hover:w-full transition-all duration-500"></div>
 
-                {/* Hover Arrow */}
-                <span className="absolute bottom-6 right-6 text-[#C9A96E] opacity-0 group-hover:opacity-100 translate-x-3 group-hover:translate-x-0 transition">
-                  →
-                </span>
+                  {/* Hover Arrow */}
+                  <span className="absolute bottom-6 right-6 text-[#C9A96E] opacity-0 group-hover:opacity-100 translate-x-3 group-hover:translate-x-0 transition">
+                    →
+                  </span>
 
-              </motion.div>
+                </motion.div>
               );
             })}
 

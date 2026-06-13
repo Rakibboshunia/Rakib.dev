@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import RootLayout from "./components/layout/RootLayout";
 import Preloader from "./components/common/Preloader";
 import PageWrapper from "./components/common/PageWrapper";
+import ChatbotWidget from "./sections/FAQ";
 
 // Lazy-loaded page components for bundle size optimization
 const Home = lazy(() => import("./pages/Home"));
@@ -49,6 +50,9 @@ function App() {
           </Routes>
         </Suspense>
       )}
+
+      {/* 🤖 Global Floating Chatbot — visible on all pages */}
+      {!loading && <ChatbotWidget />}
     </>
   );
 }

@@ -10,6 +10,7 @@ import medaiImg from "../assets/medai_dashboard.png";
 import roseCafeImg from "../assets/rose_cafe.png";
 import dailyBasketImg from "../assets/daily basket (1).png";
 import geoPulseImg from "../assets/geopulse.png";
+import eduNestImg from "../assets/edunest_dashboard.png";
 
 
 export const projectsData = [
@@ -19,6 +20,10 @@ export const projectsData = [
   category: "Dashboard",
   badgeLabel: "SAAS PLATFORM",
   role: "Frontend Developer",
+  tags: ["#React", "#TailwindCSS", "#Vite", "#FramerMotion"],
+  image: eduNestImg,
+  githubLink: "https://github.com/Rakibboshunia",
+  liveLink: "https://edu-nest-eta.vercel.app/",
 
   description:
     "EduNest is a modern SaaS-based education management platform designed to help schools and educational institutions streamline administration, monitor student performance, track attendance, and make data-driven decisions through a powerful analytics dashboard.",
