@@ -84,7 +84,6 @@ const ProjectDetails = () => {
           </div>
         </motion.div>
 
-        {/* 💻 ULTRA-PREMIUM BROWSER MOCKUP SHOWCASE */}
         <motion.div 
           style={{ opacity: heroOpacity, scale: heroScale }}
           initial={{ opacity: 0, y: 40 }}
