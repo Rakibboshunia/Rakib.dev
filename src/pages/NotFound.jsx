@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEOHelmet from "../components/common/SEOHelmet";
@@ -7,8 +6,7 @@ const NotFound = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-[#f8f9fa] dark:bg-[#0D0D0D] px-6 relative overflow-hidden transition-colors duration-300">
       <SEOHelmet title="404 Not Found | Boshunia" />
-      
-      {/* Background elements */}
+     
       <div className="absolute w-[500px] h-[500px] bg-[#C9A96E]/10 blur-[150px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
       <motion.div 
