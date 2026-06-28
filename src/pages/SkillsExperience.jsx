@@ -24,11 +24,17 @@ const experiences = [
   {
     role: "Frontend Developer",
     company: "Fire AI - Betopia Group",
-    year: "October,2025 - Present",
+    year: "September,2025 - Present",
     desc: "Developing and deploying frontend web applications, e-commerce platforms, and interactive user interfaces.",
   },
   {
-    role: "Designer For POD (print on demand) Store",
+    role: "Frontend & WordPress Developer",
+    company: "Freelance (Part Time)",
+    year: "February,2025 - Present",
+    desc: "Specialized in building responsive websites using WordPress and React.js.",
+  },
+  {
+    role: "Graphic Designer For POD (print on demand) Store",
     company: "Freelance - Various Clients Worldwide",
     year: "2021 - 2024",
     desc: "Crafted unique designs for print-on-demand platforms, leveraging creativity and market trends to create compelling products that resonate with customers.",
