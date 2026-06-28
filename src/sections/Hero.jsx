@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
-import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA .pdf";
+import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA.pdf";
 import MagneticButton from "../components/common/MagneticButton";
 import heroImg from "../assets/boshunia-hero.jpg";
 
@@ -44,9 +44,9 @@ const Hero = () => {
               </span>
 
               <h1 className="text-5xl md:text-6xl lg:text-[7rem] font-serif leading-[0.9] tracking-tighter mb-6 md:mb-8 drop-shadow-2xl mix-blend-lighten text-white">
-                Crafting <br />
+                Architecting <br />
                 <span className="text-[#C9A96E]">Digital</span> <br />
-                Masterpieces.
+                Excellence.
               </h1>
 
               <p className="text-gray-300 text-base md:text-xl max-w-xl mb-8 md:mb-12 drop-shadow-lg font-medium">

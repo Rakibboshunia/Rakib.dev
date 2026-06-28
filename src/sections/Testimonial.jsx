@@ -6,44 +6,117 @@ import img1 from "../assets/review/pic1.jpg";
 import img2 from "../assets/review/pic2.jpg";
 import img3 from "../assets/review/pic3.jpg";
 import img4 from "../assets/review/pic4.webp";
-import img5 from "../assets/RoryClark-BCrJ2eiS.jpeg";
+import img5 from "../assets/review/pic1.jpg";
+import img6 from "../assets/review/pic6.png";
+import img7 from "../assets/review/pic7.png";
+import img8 from "../assets/review/pic8.png";
+import img9 from "../assets/review/pic9.png";
+import img10 from "../assets/review/pic10.png";
+
+// Bangladeshi Client Images
+import bdClient1 from "../assets/review/bd-client-1.png";
+import bdClient2 from "../assets/review/bd-client-2.png";
+import bdClient3 from "../assets/review/bd-client-3.png";
+import bdClient4 from "../assets/review/bd-client-4.png";
+import bdClient5 from "../assets/review/bd-client-5.png";
 
 const data = [
   {
-    name: "Michael Carter",
-    role: "Founder, TechNova",
+    name: "Johan Fleuren",
+    role: "Founder, Fleuren Solutions",
+    country: "Netherlands",
     image: img1,
-    text: "Rakib transformed our idea into a stunning digital product. His attention to detail and UI skills are exceptional.",
-    project: "E-Commerce Platform"
+    text: "Good communication, delivering perfect with own ideas implement to make the project better! pleasure to work with the team.",
+    project: "Frontend Project"
   },
   {
-    name: "Emily Rodriguez",
-    role: "Marketing Director, BrightAds",
+    name: "Danparkbiz",
+    role: "Managing Director, ParkBiz",
+    country: "United Kingdom",
     image: img2,
-    text: "Working with Rakib was seamless. He delivered a clean, modern design that boosted our conversions significantly.",
-    project: "Marketing Dashboard"
+    text: "A pleasure working with Rakibul. Communication was excellent and the project was completed on time and I was updated every step of the way. Will be using again in the future.",
+    project: "Web Development"
   },
   {
-    name: "Daniel Kim",
-    role: "Product Manager, FinEdge",
-    image: img3,
-    text: "Highly professional and reliable. The user experience he designed exceeded all expectations.",
-    project: "Fintech Application"
+    name: "Fahad",
+    role: "CEO, TechNova",
+    country: "Bangladesh",
+    image: bdClient1,
+    text: "Great team, Amazing work. Highly recommend.",
+    project: "Web Development"
   },
   {
-    name: "Sophia Williams",
-    role: "CEO, Creative Studio",
+    name: "Rory Clerkin",
+    role: "Product Manager, NextGen Apps",
+    country: "Ireland",
     image: img4,
-    text: "Rakib has an incredible eye for design. His work gave our brand a premium and modern identity.",
-    project: "Brand Identity"
+    text: "Great to work with this team. Excellent communication, very polite and dedicated to their client. Looking forward to the next project already!",
+    project: "AI Mobile App & Website"
   },
   {
     name: "Rory Clark",
     role: "Founder, Soundtrack My Night",
+    country: "United States",
     image: img5,
     text: "Rakib delivered an incredible web application for Soundtrack My Night. His design aesthetics and frontend engineering skills are absolutely top-notch.",
     project: "Soundtrack My Night"
   },
+  {
+    name: "Nguyen Thach",
+    role: "Technical Lead, DevCorp",
+    country: "Vietnam",
+    image: img6,
+    text: "I'm happy with the result, i think it's exceed my expectation and will come back again if there's any other project.",
+    project: "Frontend Project"
+  },
+  {
+    name: "Akilah Collins",
+    role: "Project Manager, Collins Agency",
+    country: "United States",
+    image: img7,
+    text: "Working with this development team has been such a positive experience! They are very talented, willing to jump on a Zoom call at any time to answer questions and walk through the details of the development phases, etc.",
+    project: "Web Development"
+  },
+  {
+    name: "Rory C.",
+    role: "Operations Director, InnovateTech",
+    country: "Canada",
+    image: img8,
+    text: "Very impressed with Rakibul and his team. Extremely competent and understanding of the task at hand.",
+    project: "AI Mobile App & Website"
+  },
+  {
+    name: "Tanvir Ahmed",
+    role: "Founder, TechNova BD",
+    country: "Bangladesh",
+    image: bdClient2,
+    text: "Rakib transformed our idea into a stunning digital product. His attention to detail and UI skills are exceptional.",
+    project: "E-Commerce Platform"
+  },
+  {
+    name: "Sadia Rahman",
+    role: "Marketing Director, BrightAds",
+    country: "Bangladesh",
+    image: bdClient3,
+    text: "Working with Rakib was seamless. He delivered a clean, modern design that boosted our conversions significantly.",
+    project: "Marketing Dashboard"
+  },
+  {
+    name: "Mahmud Hasan",
+    role: "Product Manager, DhakaLabs",
+    country: "Bangladesh",
+    image: bdClient4,
+    text: "Incredible communication and a true eye for modern design. The project was delivered ahead of schedule with flawless execution.",
+    project: "SaaS Application"
+  },
+  {
+    name: "Zayed Khan",
+    role: "CEO, NextGen BD",
+    country: "Bangladesh",
+    image: bdClient5,
+    text: "Working with Rakib has been an absolute game-changer for our business. The web app is robust, incredibly fast, and looks stunning.",
+    project: "Enterprise Web App"
+  }
 ];
 
 const Testimonial = () => {
@@ -153,9 +226,15 @@ const Testimonial = () => {
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-gray-900 dark:text-white uppercase tracking-wider">{data[index].name}</h4>
-                      <p className="text-[#C9A96E] text-xs font-bold tracking-[0.2em] uppercase mt-1">
-                        {data[index].role}
-                      </p>
+                      <div className="flex items-center gap-2 mt-1">
+                        <p className="text-[#C9A96E] text-[10px] font-bold tracking-[0.2em] uppercase">
+                          {data[index].role}
+                        </p>
+                        <span className="text-gray-400 dark:text-gray-600 text-[10px]">•</span>
+                        <p className="text-gray-500 dark:text-gray-400 text-[10px] font-bold tracking-widest uppercase">
+                          {data[index].country}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </motion.div>

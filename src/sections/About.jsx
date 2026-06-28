@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import mypic from "../assets/boshunia-about.jpg";
 import SEOHelmet from "../components/common/SEOHelmet";
-import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA .pdf";
+import cvFile from "../assets/MD. AL RAKEB RASEL BOSHUNIA.pdf";
 import MagneticButton from "../components/common/MagneticButton";
 import SpotlightCard from "../components/common/SpotlightCard";
 
@@ -61,11 +61,11 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="mb-12 md:mb-16"
         >
-          <h2 className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs uppercase mb-6 block font-bold">
-            • The Narrative
+          <h2 className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-4 block font-bold">
+            • About Me
           </h2>
-          <h3 className="text-5xl md:text-7xl font-serif tracking-tighter leading-none">
-            Precision & <br /> <span className="text-[#C9A96E]">Purpose.</span>
+          <h3 className="text-4xl md:text-6xl lg:text-7xl font-serif tracking-tighter leading-[1.1]">
+            Driven by <span className="italic text-gray-500">Logic.</span> <br /> Designed for <span className="text-[#C9A96E]">Impact.</span>
           </h3>
         </motion.div>
 
@@ -77,24 +77,35 @@ const About = () => {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 relative group"
           >
-            <div className="relative w-full aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
+            <div className="relative w-full aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl group border-2 border-transparent hover:border-[#C9A96E]/30 transition-all duration-700">
               <img
                 src={mypic}
                 alt="Rakib Boshunia"
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-80"></div>
             </div>
+
+            {/* Floating Experience Badge */}
+            <motion.div
+              initial={{ scale: 0, opacity: 0, rotate: -20 }}
+              whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
+              transition={{ delay: 0.6, type: "spring", stiffness: 100 }}
+              className="absolute -top-6 -left-6 md:-left-8 bg-white dark:bg-[#111] text-[#080808] dark:text-white w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center border-4 border-gray-100 dark:border-[#080808] shadow-xl z-20"
+            >
+              <span className="text-3xl md:text-4xl font-serif font-bold text-[#C9A96E]">10+</span>
+              <span className="text-[8px] md:text-[10px] tracking-[0.2em] font-bold uppercase mt-1 text-center leading-tight">Months<br/>Experience</span>
+            </motion.div>
 
             {/* Floating Info */}
             <motion.div
               initial={{ x: 20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="absolute -bottom-6 right-0 md:-right-6 glass-card p-8 rounded-3xl border-white/10 shadow-2xl max-w-[240px]"
+              className="absolute -bottom-6 right-0 md:-right-6 glass-card p-6 md:p-8 rounded-3xl border-white/10 shadow-2xl max-w-[220px] md:max-w-[260px] backdrop-blur-xl"
             >
-              <p className="text-[10px] tracking-[0.3em] font-bold text-[#C9A96E] uppercase mb-4">Background</p>
-              <p className="text-sm leading-relaxed font-medium">Merging computer science principles with high-end aesthetic design.</p>
+              <p className="text-[10px] tracking-[0.3em] font-bold text-[#C9A96E] uppercase mb-3">Focus</p>
+              <p className="text-xs md:text-sm leading-relaxed font-medium text-gray-800 dark:text-gray-200">Delivering pixel-perfect, highly interactive frontend applications.</p>
             </motion.div>
           </motion.div>
 
@@ -105,18 +116,14 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-7"
           >
-            <h3 className="text-3xl md:text-5xl mb-6 leading-tight font-serif tracking-tight">
-              Engineering <span className="text-[#C9A96E]">impactful</span> <br />
-              digital ecosystems.
+            <h3 className="text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight font-serif tracking-tight text-gray-900 dark:text-white">
+              Crafting <span className="text-[#C9A96E] italic">digital</span> experiences that feel effortless.
             </h3>
 
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-lg mb-8 max-w-xl">
-              I specialize in bridging the gap between complex backend logic and
-              seamless frontend interfaces. My approach is rooted in clean code,
-              scalable architecture, and a relentless pursuit of visual perfection.
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base md:text-lg mb-8 max-w-xl">
+              As a specialized Frontend Developer, I bridge the gap between complex functionality and stunning visual design. I build applications that don't just work flawlessly—they leave a lasting impression.
               <br /><br />
-              Currently focused on evolving my stack with advanced Node.js integrations,
-              custom WordPress solutions, and state-of-the-art interactive design patterns.
+              My expertise lies in React ecosystem, interactive animations, and responsive architectures, ensuring every project is highly scalable, fast, and visually premium.
             </p>
 
             {/* 📊 Stats Grid */}

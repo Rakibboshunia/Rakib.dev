@@ -24,14 +24,8 @@ const experiences = [
   {
     role: "Frontend Developer",
     company: "Fire AI - Betopia Group",
-    year: "2025 - Present",
+    year: "October,2025 - Present",
     desc: "Developing and deploying frontend web applications, e-commerce platforms, and interactive user interfaces.",
-  },
-  {
-    role: "Frontend & WordPress Developer",
-    company: "Freelance",
-    year: "2024 - 2025",
-    desc: "Specialized in building responsive frontend architectures using React/Next.js and developing full-stack custom WordPress solutions.",
   },
   {
     role: "Designer For POD (print on demand) Store",

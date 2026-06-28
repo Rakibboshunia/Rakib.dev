@@ -128,10 +128,10 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs uppercase mb-4 block font-bold">
-            • Get In Touch
+            • Let's Collaborate
           </span>
           <h2 className="text-[#C9A96E] font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
-            Let’s Create <br />Something <span className="text-gray-900 dark:text-white">Impactful.</span>
+            Ready to Build <br />Your <span className="text-gray-900 dark:text-white">Next Platform.</span>
           </h2>
 
           <p className="text-gray-600 dark:text-gray-400 mb-10 max-w-md text-base leading-relaxed">

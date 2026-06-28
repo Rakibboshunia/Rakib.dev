@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { projectsData } from "../data/projectsData";
 import SpotlightCard from "../components/common/SpotlightCard";
 
-const categories = ["All", "E-Commerce", "Landing Page", "Dashboard"];
+const categories = ["All", "E-Commerce", "Landing Page", "Dashboard", "SaaS & Web App", "WordPress"];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -37,10 +37,10 @@ const Projects = () => {
         >
           <div className="max-w-2xl">
             <h2 className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs uppercase mb-6 block font-bold">
-              • Selected Works
+              • Technical Portfolio
             </h2>
             <h3 className="text-5xl md:text-7xl font-serif leading-none tracking-tighter">
-              Bespoke <br /> <span className="text-[#C9A96E]">Creations.</span>
+              Enterprise <br /> <span className="text-[#C9A96E]">Solutions.</span>
             </h3>
           </div>
 

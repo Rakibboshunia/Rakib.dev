@@ -8,7 +8,7 @@ import ChatbotWidget from "./sections/FAQ";
 
 // Lazy-loaded page components for bundle size optimization
 const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./sections/About"));
+const About = lazy(() => import("./pages/AboutPage"));
 const Services = lazy(() => import("./sections/Services"));
 const Projects = lazy(() => import("./sections/Projects"));
 const SkillsExperience = lazy(() => import("./pages/SkillsExperience"));

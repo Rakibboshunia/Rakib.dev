@@ -136,7 +136,7 @@ const ProjectDetails = () => {
                 </div>
                 <div>
                   <span className="text-[10px] tracking-wider text-[#C9A96E] font-bold uppercase block mb-1">Year</span>
-                  <span className="text-base text-gray-900 dark:text-white font-medium">2024</span>
+                  <span className="text-base text-gray-900 dark:text-white font-medium">{project.year || "2024"}</span>
                 </div>
               </div>
               <div className="h-[1px] bg-gray-200 dark:bg-white/5 w-full"></div>
@@ -256,6 +256,37 @@ const ProjectDetails = () => {
                     </div>
                   ))}
                 </div>
+              </motion.div>
+            )}
+
+            {/* 🔥 BUSINESS IMPACT SECTION */}
+            {project.businessImpact && (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="p-8 md:p-12 mt-16 bg-[#C9A96E]/10 dark:bg-[#C9A96E]/5 rounded-[2.5rem] border border-[#C9A96E]/30 shadow-lg"
+              >
+                <h3 className="text-2xl md:text-3xl font-serif text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+                  <span className="text-3xl">📈</span> Business Impact & Value
+                </h3>
+                <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-light font-sans mb-8">
+                  {project.businessImpact}
+                </p>
+
+                {project.results && project.results.length > 0 && (
+                  <div className="space-y-4">
+                    <h4 className="text-[10px] tracking-[0.3em] font-bold text-[#C9A96E] uppercase">Measurable Results</h4>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {project.results.map((res, i) => (
+                        <div key={i} className="flex items-center gap-3 bg-white/50 dark:bg-black/30 p-4 rounded-xl border border-gray-200/50 dark:border-white/5">
+                          <div className="w-2 h-2 rounded-full bg-[#C9A96E] shrink-0"></div>
+                          <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{res}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </motion.div>
             )}
 
