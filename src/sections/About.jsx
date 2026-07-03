@@ -93,8 +93,8 @@ const About = () => {
               transition={{ delay: 0.6, type: "spring", stiffness: 100 }}
               className="absolute -top-6 -left-6 md:-left-8 bg-white dark:bg-[#111] text-[#080808] dark:text-white w-28 h-28 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center border-4 border-gray-100 dark:border-[#080808] shadow-xl z-20"
             >
-              <span className="text-3xl md:text-4xl font-serif font-bold text-[#C9A96E]">10+</span>
-              <span className="text-[8px] md:text-[10px] tracking-[0.2em] font-bold uppercase mt-1 text-center leading-tight">Months<br/>Experience</span>
+              <span className="text-3xl md:text-4xl font-serif font-bold text-[#C9A96E]">1.5+</span>
+              <span className="text-[8px] md:text-[10px] tracking-[0.2em] font-bold uppercase mt-1 text-center leading-tight">Years<br/>Experience</span>
             </motion.div>
 
             {/* Floating Info */}

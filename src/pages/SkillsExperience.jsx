@@ -22,16 +22,16 @@ const mernSkills = [
 
 const experiences = [
   {
-    role: "Frontend Developer",
-    company: "Fire AI - Betopia Group",
-    year: "September,2025 - Present",
-    desc: "Developing and deploying frontend web applications, e-commerce platforms, and interactive user interfaces.",
+    role: "Front-end Developer",
+    company: "Fire AI | Dhaka, Bangladesh",
+    year: "October 2025 – Present",
+    desc: "Developed scalable and responsive web applications using React.js and Next.js. Collaborated with cross-functional teams to deliver high-quality, user-focused digital solutions.",
   },
   {
-    role: "Frontend & WordPress Developer",
-    company: "Freelance (Part Time)",
-    year: "February,2025 - Present",
-    desc: "Specialized in building responsive websites using WordPress and React.js.",
+    role: "Front-end Developer",
+    company: "Freelance | Part-time",
+    year: "February 2025 – Present",
+    desc: "Developed responsive web applications using React.js. Built business, e-commerce, and portfolio websites.",
   },
   {
     role: "Graphic Designer For POD (print on demand) Store",
