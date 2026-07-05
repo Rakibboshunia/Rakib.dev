@@ -10,56 +10,52 @@ import {
   FaMobileAlt,
   FaSearch,
   FaLightbulb,
+  FaWordpress,
+  FaShopify,
+  FaShoppingCart,
 } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 
 const services = [
   {
-    title: "Web Development",
-    desc: "Building unique website tailored to specific business needs and branding.",
-    icon: <FaCode />,
-    number: "02",
+    title: "React & Next.js Development",
+    desc: "Building scalable, high-performance web applications using React.js and Next.js with modern best practices.",
+    icon: <SiNextdotjs />,
   },
   {
-    title: "Responsive Design",
-    desc: "Ensuring the website looks and works well on all devices (desktop, tablet, mobile).",
+    title: "Responsive Web Design",
+    desc: "Ensuring pixel-perfect, fully responsive layouts across all devices — mobile, tablet, and desktop.",
     icon: <FaMobileAlt />,
-    number: "02",
+  },
+  {
+    title: "WordPress Development",
+    desc: "Creating custom WordPress websites, themes, and Elementor Pro pages tailored to your brand and goals.",
+    icon: <FaWordpress />,
+  },
+  {
+    title: "Shopify Store Development",
+    desc: "Building and customizing Shopify stores with conversion-optimized product pages and seamless checkout.",
+    icon: <FaShopify />,
+  },
+  {
+    title: "E-Commerce Solutions",
+    desc: "End-to-end e-commerce development including WooCommerce, product management, and payment integration.",
+    icon: <FaShoppingCart />,
   },
   {
     title: "UI/UX Implementation",
-    desc: "Transform design mockups (Figma, Adobe XD, etc.) into fully functional web pages.",
+    desc: "Transforming Figma and Adobe XD designs into pixel-perfect, interactive, and fully functional web pages.",
     icon: <FaPenNib />,
-    number: "01",
   },
   {
-    title: "Code Debugging and Maintenance",
-    desc: "Identifying and fixing issues in existing code to ensure optimal performance.",
-    icon: <FaCode />,
-    number: "03",
-  },
-  {
-    title: "Integration Services",
-    desc: "Connecting the frontend with APIs or backends to enable data fetching and interactivity.",
-    icon: <FaCode />,
-    number: "03",
-  },
-  {
-    title: "Version Control and Deployment",
-    desc: "Managing code changes and deploying applications efficiently.",
+    title: "SEO & Performance",
+    desc: "Optimizing websites for speed, Core Web Vitals, and search engine visibility to maximize organic reach.",
     icon: <FaSearch />,
-    number: "04",
   },
   {
-    title: "Branding",
-    desc: "Creating strong and memorable digital identities for businesses.",
-    icon: <FaPalette />,
-    number: "03",
-  },
-  {
-    title: "Consulting",
-    desc: "Providing strategic insights to grow your digital presence.",
+    title: "Consulting & Strategy",
+    desc: "Providing expert guidance on tech stack, architecture decisions, and digital growth strategies.",
     icon: <FaLightbulb />,
-    number: "06",
   },
 ];
 

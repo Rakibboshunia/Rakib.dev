@@ -10,10 +10,41 @@ import medaiImg from "../assets/medai_dashboard.png";
 import roseCafeImg from "../assets/rose_cafe.png";
 import dailyBasketImg from "../assets/daily basket (1).png";
 import geoPulseImg from "../assets/geopulse.png";
-import eduNestImg from "../assets/edunest_dashboard.png";
+import eduNestImg from "../assets/edunest_dashboard_new.png";
+import dashboardImg from "../assets/dashboard.webp";
+import taskflowImg from "../assets/taskflow-ai.png";
 import { wordpressProjectsData } from "./wordpressProjectsData";
 
 export const projectsData = [
+  {
+    id: 15,
+    title: "TaskFlow AI: Project Management",
+    category: "Dashboard",
+    badgeLabel: "AI PLATFORM",
+    role: "Frontend Developer",
+    year: "2026",
+    description: "An AI-powered project management dashboard featuring interactive Kanban boards, analytics, and an AI assistant interface.",
+    tags: ["#Next.js", "#TailwindCSS", "#FramerMotion"],
+    image: taskflowImg,
+    githubLink: "https://github.com/Rakibboshunia/Taskflow-AI",
+    liveLink: "https://taskflow-ai-bice-eta.vercel.app/",
+    overview: "TaskFlow AI is a comprehensive project management dashboard designed with a modern dark theme and premium gradient UI. It features real-time analytics, modular task views, and an integrated AI assistant to enhance team productivity and workflow management.",
+    challenges: "Designing a sophisticated, dark-themed UI that is both visually striking and highly functional. The challenge included implementing a responsive sidebar navigation and complex interactive components like analytics charts without compromising performance.",
+    solution: "Utilized Next.js for a robust architecture and Tailwind CSS for rapid, scalable styling. Leveraged Framer Motion to add smooth, dynamic animations that create a high-end, interactive user experience.",
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "React Icons"],
+    features: [
+      "Integrated AI Assistant for enhanced project insights",
+      "Interactive analytics charts and dynamic progress tracking",
+      "Modern dark-mode UI with premium purple-tinted gradients",
+      "Fully responsive layout with seamless sidebar navigation"
+    ],
+    businessImpact: "Empowers teams with an intelligent, centralized hub for project management, combining aesthetic excellence with powerful functionality to drive productivity.",
+    results: [
+      "Delivered a visually stunning, executive-level dashboard experience",
+      "Optimized cross-device responsiveness and fast load times",
+      "Established a highly modular and scalable component architecture"
+    ]
+  },
   {
   id: 13,
   title: "EduNest: SaaS Education Platform",

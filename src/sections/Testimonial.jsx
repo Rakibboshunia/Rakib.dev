@@ -94,7 +94,7 @@ const data = [
     project: "E-Commerce Platform"
   },
   {
-    name: "Sadia Rahman",
+    name: "Shariar Hossain",
     role: "Marketing Director, BrightAds",
     country: "Bangladesh",
     image: bdClient3,

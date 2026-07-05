@@ -52,6 +52,32 @@ const faqs = [
     a: "Absolutely! I can integrate headless CMS solutions like Contentful, Sanity, or Strapi so you can manage your website content without touching any code. 🗂️",
   },
 
+  // ── WordPress & Shopify ──
+  {
+    q: "Do you work with WordPress?",
+    a: "Yes! I build custom WordPress websites, themes, and plugins. Whether it's a blog, business site, or portfolio — I can create a fully tailored WordPress solution with Elementor Pro or custom-coded themes. 🎨",
+  },
+  {
+    q: "Can you build a WooCommerce store?",
+    a: "Absolutely! I build fully functional WooCommerce stores with custom product pages, payment gateway integration (Stripe, PayPal, bKash), shipping setup, and a polished storefront that converts. 🛒",
+  },
+  {
+    q: "Can you customize an existing WordPress theme?",
+    a: "Yes! I can customize any existing WordPress theme — adjusting layouts, colors, fonts, and functionality to perfectly match your brand without breaking existing features. ✂️",
+  },
+  {
+    q: "Do you build Shopify stores?",
+    a: "Yes! I design and develop custom Shopify stores with theme customization, product setup, app integrations, and conversion-optimized landing pages to help you sell more effectively. 🏪",
+  },
+  {
+    q: "Can you migrate my site to WordPress or Shopify?",
+    a: "Definitely! I can migrate your existing website to WordPress or Shopify while preserving your content, SEO structure, and design — ensuring a smooth, zero-downtime transition. 🔄",
+  },
+  {
+    q: "Will my WordPress/Shopify site be fast and SEO optimized?",
+    a: "Yes! I optimize every site for speed using caching plugins, CDN setup, image compression, and clean code. SEO best practices like proper meta tags, schema markup, and sitemap setup are always included. 📈",
+  },
+
   // ── Fullstack / Backend ──
   {
     q: "Can you build a fullstack web app?",
@@ -254,7 +280,7 @@ const ChatbotWidget = () => {
                 <FaRobot className="text-black text-sm" />
               </div>
               <div>
-                <p className="text-sm font-bold text-gray-900 dark:text-white leading-none mb-0.5">Rakib's Assistant</p>
+                <p className="text-sm font-bold text-gray-900 dark:text-white leading-none mb-0.5">Boshunia's Assistant</p>
                 <p className="text-[10px] text-emerald-500 font-semibold flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse" />
                   Online · Always available
@@ -288,8 +314,8 @@ const ChatbotWidget = () => {
                     )}
                     <div
                       className={`max-w-[80%] px-3.5 py-2.5 rounded-2xl text-xs leading-relaxed shadow-sm ${msg.type === "bot"
-                          ? "rounded-bl-none bg-white dark:bg-[#1e1e1e] border border-gray-100 dark:border-white/8 text-gray-800 dark:text-gray-200"
-                          : "rounded-br-none bg-[#C9A96E] text-black font-medium"
+                        ? "rounded-bl-none bg-white dark:bg-[#1e1e1e] border border-gray-100 dark:border-white/8 text-gray-800 dark:text-gray-200"
+                        : "rounded-br-none bg-[#C9A96E] text-black font-medium"
                         }`}
                     >
                       {msg.text}
@@ -326,8 +352,8 @@ const ChatbotWidget = () => {
                       onClick={() => handleAsk(faq, i)}
                       disabled={done}
                       className={`flex items-center gap-1 text-[11px] px-3 py-1.5 rounded-full border font-medium transition-all duration-200 ${done
-                          ? "border-[#C9A96E]/20 bg-[#C9A96E]/8 text-[#C9A96E]/40 cursor-default line-through"
-                          : "border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] text-gray-700 dark:text-gray-300 hover:border-[#C9A96E]/60 hover:text-[#C9A96E] shadow-sm"
+                        ? "border-[#C9A96E]/20 bg-[#C9A96E]/8 text-[#C9A96E]/40 cursor-default line-through"
+                        : "border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] text-gray-700 dark:text-gray-300 hover:border-[#C9A96E]/60 hover:text-[#C9A96E] shadow-sm"
                         }`}
                     >
                       {!done && <FaPaperPlane className="text-[#C9A96E] text-[8px]" />}
