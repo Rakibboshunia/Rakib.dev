@@ -13,9 +13,39 @@ import geoPulseImg from "../assets/geopulse.png";
 import eduNestImg from "../assets/edunest_dashboard_new.png";
 import dashboardImg from "../assets/dashboard.webp";
 import taskflowImg from "../assets/taskflow-ai.png";
+import nextResumeImg from "../assets/nextresume_dashboard.png";
 import { wordpressProjectsData } from "./wordpressProjectsData";
 
 export const projectsData = [
+  {
+    id: 16,
+    title: "NextResume AI: AI Resume Builder",
+    category: "SaaS & Web App",
+    badgeLabel: "AI PLATFORM",
+    role: "Full Stack Developer",
+    year: "2026",
+    description: "An AI-powered resume builder featuring a multi-step form, real-time preview, and premium dark-themed UI.",
+    tags: ["#Next.js", "#TailwindCSS", "#Prisma", "#NextAuth"],
+    image: nextResumeImg,
+    githubLink: "https://github.com/Rakibboshunia/NextResume-AI",
+    liveLink: "https://next-resume-ai-virid.vercel.app/",
+    overview: "NextResume AI is a production-ready, AI-powered resume builder. It features a modern dark-themed UI, multi-step forms with real-time preview, and secure authentication. The platform is designed to provide a high-end executive experience for users creating professional resumes.",
+    challenges: "Building a complex multi-step form with real-time preview while maintaining a responsive, visually premium dark theme. Integrating a PostgreSQL backend via Prisma and securing authentication with NextAuth.",
+    solution: "Utilized Next.js for robust architecture, Tailwind CSS for styling, Prisma for database management, and NextAuth for secure authentication.",
+    technologies: ["Next.js", "Tailwind CSS", "Prisma", "NextAuth", "PostgreSQL"],
+    features: [
+      "AI-powered resume generation and formatting",
+      "Real-time resume preview with dynamic styling",
+      "Secure authentication and user management",
+      "Premium dark-themed dashboard and UI"
+    ],
+    businessImpact: "Provides users with a professional, easy-to-use tool for creating high-quality resumes, improving their job search success.",
+    results: [
+      "Delivered a visually premium and fully responsive AI resume builder",
+      "Integrated secure authentication and database management",
+      "Optimized multi-step form flow and real-time preview"
+    ]
+  },
   {
     id: 15,
     title: "TaskFlow AI: Project Management",
