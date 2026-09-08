@@ -35,6 +35,22 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
+  const hireMeEmailBody = `Hi Boshunia,
+
+I came across your portfolio and I'm interested in hiring you.
+
+Project: 
+Budget: 
+Timeline: 
+WhatsApp: 
+
+Looking forward to your response.
+
+Best Regards,
+[Your Name]`;
+
+  const hireMeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=official.alrakib@gmail.com&su=${encodeURIComponent("Hiring Inquiry — Let's Work Together")}&body=${encodeURIComponent(hireMeEmailBody)}`;
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -64,33 +80,33 @@ const Navbar = () => {
 
   // Immersive Mobile Menu Variants
   const menuVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: "-100%",
-      transition: { 
-        duration: 0.5, 
+      transition: {
+        duration: 0.5,
         ease: [0.16, 1, 0.3, 1],
         staggerChildren: 0.05,
         staggerDirection: -1
       }
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         duration: 0.6,
         ease: [0.16, 1, 0.3, 1],
         staggerChildren: 0.08,
         delayChildren: 0.1
-      } 
+      }
     }
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40, rotate: 2 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       rotate: 0,
       transition: { type: "spring", stiffness: 100, damping: 20 }
     }
@@ -98,9 +114,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
-        scrolled ? "py-4" : "py-8"
-      }`}
+      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled ? "py-4" : "py-8"
+        }`}
     >
       {/* Professional Progress Bar */}
       <motion.div
@@ -109,10 +124,9 @@ const Navbar = () => {
       />
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className={`relative glass rounded-full border-white/5 transition-all duration-500 ${
-          scrolled ? "px-8 py-3 bg-white/5 backdrop-blur-xl border-white/10" : "px-4 py-2 bg-transparent border-transparent"
-        } flex items-center justify-between`}>
-          
+        <div className={`relative glass rounded-full border-white/5 transition-all duration-500 ${scrolled ? "px-8 py-3 bg-white/5 backdrop-blur-xl border-white/10" : "px-4 py-2 bg-transparent border-transparent"
+          } flex items-center justify-between`}>
+
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group z-[110]">
             <div className="w-8 h-8 rounded-lg bg-[#C9A96E] flex items-center justify-center font-serif font-bold text-black group-hover:rotate-12 transition-transform">
@@ -129,9 +143,8 @@ const Navbar = () => {
               <NavLink
                 key={link.path}
                 to={link.path}
-                className={({ isActive }) => 
-                  `text-[10px] font-bold tracking-[0.3em] uppercase transition-all hover:text-[#C9A96E] relative group ${
-                    isActive ? "text-[#C9A96E]" : "text-gray-400"
+                className={({ isActive }) =>
+                  `text-[10px] font-bold tracking-[0.3em] uppercase transition-all hover:text-[#C9A96E] relative group ${isActive ? "text-[#C9A96E]" : "text-gray-400"
                   }`
                 }
               >
@@ -163,7 +176,9 @@ const Navbar = () => {
               Let's Talk
             </Link>
             <a
-              href="mailto:official.alrakib@gmail.com"
+              href={hireMeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden lg:flex items-center gap-2 px-6 py-2.5 border border-[#C9A96E] text-[#C9A96E] font-bold text-[10px] tracking-widest uppercase rounded-full hover:bg-[#C9A96E] hover:text-black transition-all duration-300 relative group overflow-hidden"
             >
               <span className="absolute inset-0 bg-[#C9A96E]/10 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -202,16 +217,15 @@ const Navbar = () => {
             {/* Main Menu Links Grid */}
             <div className="relative z-10 flex flex-col justify-center gap-6 md:gap-8 my-auto">
               {navLinks.map((link, idx) => (
-                <motion.div 
+                <motion.div
                   key={link.path}
                   variants={itemVariants}
                 >
                   <NavLink
                     to={link.path}
                     onClick={() => setIsOpen(false)}
-                    className={({ isActive }) => 
-                      `flex items-baseline gap-4 font-serif text-4xl md:text-5xl tracking-tighter uppercase transition-colors duration-300 ${
-                        isActive ? "text-[#C9A96E]" : "text-white/60 hover:text-white"
+                    className={({ isActive }) =>
+                      `flex items-baseline gap-4 font-serif text-4xl md:text-5xl tracking-tighter uppercase transition-colors duration-300 ${isActive ? "text-[#C9A96E]" : "text-white/60 hover:text-white"
                       }`
                     }
                   >
@@ -230,14 +244,16 @@ const Navbar = () => {
                 <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-white/30">
                   OFFICIAL EMAIL
                 </span>
-                <a 
-                  href="mailto:official.alrakib@gmail.com" 
+                <a
+                  href="mailto:official.alrakib@gmail.com"
                   className="font-mono text-sm text-[#C9A96E] hover:text-white transition-colors"
                 >
                   official.alrakib@gmail.com
                 </a>
                 <a
-                  href="mailto:official.alrakib@gmail.com"
+                  href={hireMeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 w-fit px-8 py-3 border border-[#C9A96E] text-[#C9A96E] font-bold text-xs tracking-widest uppercase rounded-full hover:bg-[#C9A96E] hover:text-black transition-all duration-300"
                 >
