@@ -3,7 +3,7 @@ import medaiImg from "../../assets/medai_dashboard.png";
 export const medAi = {
   id: 9,
   title: "Med AI: Healthcare Telemetry Portal",
-  category: "Dashboard",
+  category: "SaaS & Web App",
   badgeLabel: "HEALTHCARE PORTAL",
   role: "Lead Frontend Developer",
   year: "2025",

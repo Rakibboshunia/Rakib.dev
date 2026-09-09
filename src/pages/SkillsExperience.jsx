@@ -35,9 +35,15 @@ const experiences = [
     desc: "• Develop responsive WordPress & Shopify websites with customized themes and e-commerce features.\n• Customize WooCommerce/Shopify stores, integrate required functionality, and optimize user experience.",
   },
   {
+    role: "WordPress & Shopify Expert",
+    company: "Freelance - Fiverr & Open Market (Facebook)",
+    year: "2025 - Present",
+    desc: "• Developed custom WordPress & Shopify websites for diverse international clients.\n• Managed full-cycle e-commerce setups, theme customizations, and store optimization.",
+  },
+  {
     role: "Graphic Designer For POD (print on demand) Store",
     company: "Freelance - Various Clients Worldwide",
-    year: "2021 - 2024",
+    year: "2020 - 2023",
     desc: "Crafted unique designs for print-on-demand platforms, leveraging creativity and market trends to create compelling products that resonate with customers.",
   }
 ];
@@ -55,7 +61,7 @@ const SkillsExperience = () => {
   return (
     <section id="skills-experience" className="py-20 px-6 bg-[#f8f9fa] dark:bg-[#080808] relative overflow-hidden min-h-screen transition-colors duration-300">
       <SEOHelmet title="Skills & Experience | Boshunia" />
-      {/* Background glow */}
+
       <div className="absolute w-[600px] h-[600px] bg-[#C9A96E]/10 blur-[150px] rounded-full top-[-100px] left-1/2 -translate-x-1/2"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -99,9 +105,7 @@ const SkillsExperience = () => {
             </div>
           </motion.div>
 
-          {/* Right Column: Experience & Education */}
           <div className="space-y-24">
-            {/* Experience Section */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -129,7 +133,6 @@ const SkillsExperience = () => {
               </div>
             </motion.div>
 
-            {/* Education Section */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}

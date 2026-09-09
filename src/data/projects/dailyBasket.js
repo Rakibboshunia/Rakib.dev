@@ -3,7 +3,7 @@ import dailyBasketImg from "../../assets/daily basket (1).png";
 export const dailyBasket = {
   id: 11,
   title: "Daily Basket: Grocery E-Commerce Platform",
-  category: "SaaS & Web App",
+  category: "E-Commerce",
   badgeLabel: "E-COMMERCE PLATFORM",
   role: "Frontend Developer",
   year: "2026",

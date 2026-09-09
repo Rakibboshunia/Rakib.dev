@@ -40,17 +40,17 @@ const Hero = () => {
               </motion.div>
 
               <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-4 md:mb-6 block font-bold shadow-black drop-shadow-md">
-                • Custom Code | WordPress | Shopify
+                MERN Stack | WordPress | Shopify
               </span>
 
-              <h1 className="text-5xl md:text-6xl lg:text-[7rem] font-serif leading-[0.9] tracking-tighter mb-6 md:mb-8 drop-shadow-2xl mix-blend-lighten text-white">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-[0.9] tracking-tighter mb-6 md:mb-8 drop-shadow-2xl mix-blend-lighten text-white">
                 Architecting <br />
                 <span className="text-[#C9A96E]">Digital</span> <br />
                 Excellence.
               </h1>
 
               <p className="text-gray-300 text-base md:text-xl max-w-xl mb-8 md:mb-12 drop-shadow-lg font-medium">
-                I build high-performance web applications bridging complex engineering with pure aesthetics. Specializing in Custom Code, WordPress, and Shopify solutions for real-world clients.
+                I build high-performance web applications bridging complex engineering with pure aesthetics. Specializing in MERN Stack, WordPress, and Shopify solutions for real-world clients.
               </p>
 
               <div className="flex flex-wrap gap-6 md:gap-8 items-center">

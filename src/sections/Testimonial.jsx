@@ -157,7 +157,7 @@ const Testimonial = () => {
           <h2 className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs uppercase mb-4 block font-bold">
             • Client Reviews
           </h2>
-          <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-tight">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif tracking-tighter leading-tight">
             What My Clients <br />
             <span className="text-[#C9A96E]">Say About Me.</span>
           </h3>

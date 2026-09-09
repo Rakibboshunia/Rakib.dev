@@ -3,7 +3,7 @@ import erpDashboard from "../../assets/erp-dashboard.png";
 export const enterpriseErp = {
   id: 18,
   title: "Enterprise ERP System",
-  category: "Dashboard",
+  category: "SaaS & Web App",
   badgeLabel: "ENTERPRISE PLATFORM",
   role: "Full Stack Developer",
   year: "2026",

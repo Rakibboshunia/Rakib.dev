@@ -3,7 +3,7 @@ import img7 from "../../assets/Screenshot 2026-05-12 160457.png";
 export const roryAdmin = {
   id: 7,
   title: "Rory: Creative Admin Dashboard",
-  category: "Dashboard",
+  category: "SaaS & Web App",
   badgeLabel: "ADMIN PANEL",
   role: "Lead Frontend Engineer",
   year: "2025",

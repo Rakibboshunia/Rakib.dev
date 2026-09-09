@@ -16,7 +16,7 @@ import taskflow13 from "../../assets/Taskflow Ai/screencapture-taskflow-ai-bice-
 export const taskflowAi = {
   id: 15,
   title: "TaskFlow AI: Project Management",
-  category: "Dashboard",
+  category: "SaaS & Web App",
   badgeLabel: "AI PLATFORM",
   role: "Frontend Developer",
   year: "2026",

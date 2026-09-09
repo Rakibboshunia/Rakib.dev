@@ -1,4 +1,8 @@
 import saasImg from "../assets/saas.webp";
+import squeakyCleanHero from "../assets/squeaky_clean_hero.png";
+import slvrLabHero from "../assets/slvr_lab_hero.png";
+import ecommAllianceHero from "../assets/ecomm_alliance_hero.png";
+import allswellCareHero from "../assets/allswell_care_hero.png";
 
 export const wordpressProjectsData = [
   {
@@ -10,7 +14,7 @@ export const wordpressProjectsData = [
     year: "2026",
     description: "A high-conversion agency platform engineered to drive digital service sales and showcase creative portfolios.",
     tags: ["#WordPress", "#Agency", "#Elementor"],
-    image: saasImg,
+    image: squeakyCleanHero,
     githubLink: "",
     liveLink: "https://squeakycleanexpertsllc.com/",
     overview: "Squeaky Clean is a digital agency platform built to function as a primary lead generation engine. By leveraging a streamlined user experience and strategic call-to-actions, it positions the agency as a premium service provider.",
@@ -20,6 +24,86 @@ export const wordpressProjectsData = [
     results: ["Increased organic traffic retention by 40%", "Reduced average page load time to under 1.5s", "Boosted inbound lead conversion rate by 25%"],
     technologies: ["WordPress", "Elementor", "PHP", "SEO Optimization"],
     features: ["High-converting portfolio showcases", "Automated lead capture forms", "Performance-optimized asset delivery"]
+  },
+  {
+    id: 23,
+    title: "The SLVR Lab: Online Learning Platform",
+    category: "WordPress",
+    badgeLabel: "E-LEARNING PLATFORM",
+    role: "WordPress Developer",
+    year: "2026",
+    description: "A premium online education platform powered by Tutor LMS, delivering structured courses and mentorship in a sleek, brand-aligned digital environment.",
+    tags: ["#WordPress", "#TutorLMS", "#Elementor"],
+    image: slvrLabHero,
+    githubLink: "",
+    liveLink: "https://theslvrlab.com/",
+    overview: "The SLVR Lab is a full-featured online learning platform built to deliver professional courses to a modern audience. Built on WordPress with Tutor LMS Pro and Elementor, it features a fully branded experience with custom typography, responsive course catalogs, and a polished black-and-white aesthetic that conveys premium authority.",
+    challenges: "The primary challenge was seamlessly integrating a robust LMS system (Tutor LMS Pro) within a highly custom-designed Elementor layout, while ensuring a consistent Montserrat-based brand identity across all course pages, student dashboards, and authentication flows.",
+    solution: "Developed a fully customized WordPress theme using Hello Elementor as a lightweight base, with Tutor LMS Pro handling course delivery. Applied global CSS overrides and Elementor kits to enforce brand consistency, and configured Zoom integration for live sessions.",
+    businessImpact: "Enabled the client to launch and scale a digital education business, converting their expertise into a scalable, recurring-revenue course model with built-in student management.",
+    results: ["Launched a fully functional LMS with student enrollment flows", "Integrated live Zoom sessions for real-time coaching", "Established a distinctive brand identity with 100% custom UI"],
+    technologies: ["WordPress", "Tutor LMS Pro", "Elementor Pro", "ElementsKit", "PHP", "Zoom Integration"],
+    features: ["Full LMS with course catalog and student dashboard", "Live session integration via Zoom", "Custom-branded responsive UI with Montserrat typography", "Automated enrollment and progress tracking"]
+  },
+  {
+    id: 24,
+    title: "ECOMM Alliance Group: Business Consulting Platform",
+    category: "WordPress",
+    badgeLabel: "BUSINESS CONSULTING",
+    role: "WordPress Developer",
+    year: "2026",
+    description: "A high-conversion consulting platform for an e-commerce business accelerator, engineered to drive lead generation and communicate authority in the digital retail space.",
+    tags: ["#WordPress", "#Elementor", "#LeadGeneration"],
+    image: ecommAllianceHero,
+    githubLink: "",
+    liveLink: "https://ecommalliancegroup.com/",
+    overview: "ECOMM Alliance Group is a business consulting platform for entrepreneurs looking to build and scale e-commerce businesses. The site features a cinematic video hero section, an animated partner logo carousel, and detailed service breakdowns covering Corporate Credit and Product Sourcing Networks — all engineered to build trust and drive conversions.",
+    challenges: "Conveying the complexity of their consulting services — spanning corporate credit, exclusive supplier contracts, and funded automation — in a digestible format that builds trust with first-time visitors while driving immediate CTA engagement.",
+    solution: "Deployed a video-background hero with a strong value proposition headline and immediate CTAs. Structured the page with step-flow service modules, a partner carousel, and an integrated coaching financing link to lower the barrier to entry for new clients.",
+    businessImpact: "Created a central digital hub that automates the top-of-funnel sales process, reducing time-to-lead and giving the sales team qualified, pre-educated prospects.",
+    results: ["Boosted inbound consultation requests through strategic CTA placement", "Integrated Google Tag Manager for full funnel tracking", "Delivered a site that communicates authority and trust at first glance"],
+    technologies: ["WordPress", "Elementor Pro", "Element Pack", "Fluent Forms", "Google Tag Manager", "PHP"],
+    features: ["Cinematic video hero with animated overlay", "Step-flow service module layout", "Partner logo carousel and social proof sections", "Integrated consultation booking and financing CTA"]
+  },
+  {
+    id: 21,
+    title: "Allswell: Accessible Care Platform",
+    category: "WordPress",
+    badgeLabel: "CARE SERVICES",
+    role: "WordPress Developer",
+    year: "2026",
+    description: "An ADA-compliant, accessible web platform designed to connect vulnerable clients with essential care services.",
+    tags: ["#WordPress", "#Accessible", "#WebDesign"],
+    image: allswellCareHero,
+    githubLink: "",
+    liveLink: "http://allswellcareservices.co.uk/",
+    overview: "Allswell Care Services needed a platform that prioritized accessibility and trust. The platform was engineered to provide clear, empathetic communication and easy access to critical healthcare services.",
+    challenges: "Balancing a warm, welcoming aesthetic with strict web accessibility standards (WCAG) to ensure the platform is usable by elderly and disabled demographics.",
+    solution: "Implemented high-contrast color systems, scalable typography, and screen-reader optimized code alongside a comforting visual identity to build trust.",
+    businessImpact: "Expanded the organization's reach to vulnerable demographics, ensuring compliance with legal accessibility requirements and significantly improving user trust.",
+    results: ["Achieved 100% WCAG accessibility compliance score", "Increased service inquiries by 35%", "Reduced bounce rate among elderly demographics"],
+    technologies: ["WordPress", "Elementor", "CSS3", "WCAG Standards"],
+    features: ["Fully accessible UI/UX design", "Streamlined service request workflows", "Secure, HIPAA-compliant form processing"]
+  },
+  {
+    id: 25,
+    title: "Italian Bracelets: Luxury WooCommerce Store",
+    category: "WordPress",
+    badgeLabel: "LUXURY E-COMMERCE",
+    role: "WordPress Developer",
+    year: "2026",
+    description: "A premium WooCommerce store for handcrafted Italian replacement watch bracelets, combining luxury aesthetics with a seamless, high-conversion shopping experience.",
+    tags: ["#WordPress", "#WooCommerce", "#LuxuryEcommerce"],
+    image: saasImg,
+    githubLink: "",
+    liveLink: "https://italianbracelets.com/",
+    overview: "Italian Bracelets is a luxury e-commerce destination selling high-end replacement watch bracelets — including Oyster and Jubilee styles — crafted in Italy. Built on WordPress with WooCommerce, the platform features a sophisticated monochromatic aesthetic, a product catalog segmented by bracelet type and availability (Ready to Ship vs. Made to Order), and a streamlined checkout experience designed for a discerning clientele.",
+    challenges: "Crafting a digital storefront that communicates the premium, handcrafted nature of the products while simultaneously handling the complexity of a WooCommerce catalog with variable products, size configurations, and multiple fulfillment types.",
+    solution: "Built on Hello Elementor for a clean, performance-optimized base with ElementsKit for advanced navigation. Implemented WooCommerce with variable product support, a sliding cart (FKCart), and a custom black-and-white brand palette to evoke Italian luxury craftsmanship.",
+    businessImpact: "Provided the brand with a scalable, premium digital storefront that positions them as the go-to source for discerning watch enthusiasts seeking authentic Italian-crafted replacement bracelets.",
+    results: ["Launched a full-featured WooCommerce store with variable product support", "Implemented a frictionless sliding cart for a seamless checkout UX", "Established a luxury brand identity with custom typography and monochromatic palette"],
+    technologies: ["WordPress", "WooCommerce", "Elementor Pro", "ElementsKit", "FKCart", "PHP"],
+    features: ["Variable product catalog for Oyster and Jubilee bracelet collections", "Ready to Ship and Made to Order product segmentation", "Sliding cart (FKCart) for seamless add-to-cart experience", "Luxury monochromatic UI with Roboto & Poppins typography"]
   },
   {
     id: 19,
@@ -60,25 +144,5 @@ export const wordpressProjectsData = [
     results: ["Delivered project 20% faster than industry standard", "Achieved 95+ Google PageSpeed insights score", "Generated immediate ROI through rapid deployment"],
     technologies: ["WordPress", "Elementor", "PHP", "Performance Tuning"],
     features: ["Dynamic content management workflows", "Technical SEO foundation", "Frictionless conversion funnels"]
-  },
-  {
-    id: 21,
-    title: "Allswell: Accessible Care Platform",
-    category: "WordPress",
-    badgeLabel: "CARE SERVICES",
-    role: "WordPress Developer",
-    year: "2026",
-    description: "An ADA-compliant, accessible web platform designed to connect vulnerable clients with essential care services.",
-    tags: ["#WordPress", "#Accessible", "#WebDesign"],
-    image: saasImg,
-    githubLink: "",
-    liveLink: "http://allswellcareservices.co.uk/",
-    overview: "Allswell Care Services needed a platform that prioritized accessibility and trust. The platform was engineered to provide clear, empathetic communication and easy access to critical healthcare services.",
-    challenges: "Balancing a warm, welcoming aesthetic with strict web accessibility standards (WCAG) to ensure the platform is usable by elderly and disabled demographics.",
-    solution: "Implemented high-contrast color systems, scalable typography, and screen-reader optimized code alongside a comforting visual identity to build trust.",
-    businessImpact: "Expanded the organization's reach to vulnerable demographics, ensuring compliance with legal accessibility requirements and significantly improving user trust.",
-    results: ["Achieved 100% WCAG accessibility compliance score", "Increased service inquiries by 35%", "Reduced bounce rate among elderly demographics"],
-    technologies: ["WordPress", "Elementor", "CSS3", "WCAG Standards"],
-    features: ["Fully accessible UI/UX design", "Streamlined service request workflows", "Secure, HIPAA-compliant form processing"]
   }
 ];

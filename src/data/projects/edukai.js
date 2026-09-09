@@ -3,7 +3,7 @@ import img4 from "../../assets/Screenshot 2026-05-12 154122.png";
 export const edukai = {
   id: 4,
   title: "Edukai: AI Recruitment Automation",
-  category: "Dashboard",
+  category: "SaaS & Web App",
   badgeLabel: "AI & AUTOMATION",
   role: "Full Frontend Engineer",
   year: "2026",

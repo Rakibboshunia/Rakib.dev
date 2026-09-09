@@ -1,4 +1,3 @@
-import medicareImg from "../../assets/medicare.png";
 import medicareDashboard from "../../assets/Madicare Pro/screencapture-medi-care-pro-swart-vercel-app-2026-07-16-22_11_28.png";
 import medicareAiAssistant from "../../assets/Madicare Pro/screencapture-medi-care-pro-swart-vercel-app-ai-assistant-2026-07-16-22_13_11.png";
 import medicareAmbulance from "../../assets/Madicare Pro/screencapture-medi-care-pro-swart-vercel-app-ambulance-2026-07-16-22_12_22.png";
@@ -15,13 +14,13 @@ import medicareSettings from "../../assets/Madicare Pro/screencapture-medi-care-
 export const medicarePro = {
   id: 17,
   title: "MediCare Pro: Hospital Management",
-  category: "Dashboard",
+  category: "SaaS & Web App",
   badgeLabel: "HEALTHCARE PLATFORM",
   role: "Full Stack Developer",
   year: "2026",
   description: "A premium hospital management dashboard featuring real-time data visualization, patient management, and interactive micro-animations.",
   tags: ["#Next.js", "#TailwindCSS", "#FramerMotion"],
-  image: medicareImg,
+  image: medicareDashboard,
   galleryImages: [
     medicareDashboard,
     medicareLogin,

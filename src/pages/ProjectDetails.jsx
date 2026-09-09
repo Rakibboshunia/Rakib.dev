@@ -79,7 +79,7 @@ const ProjectDetails = () => {
                 <span className="text-[10px] tracking-[0.4em] font-extrabold text-[#C9A96E] uppercase mb-4 block">
                   {project.category}
                 </span>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-gray-900 dark:text-white leading-none tracking-tighter">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 dark:text-white leading-none tracking-tighter">
                   {project.title}
                 </h1>
               </div>
@@ -369,7 +369,7 @@ const ProjectDetails = () => {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center px-6">
               <p className="text-[10px] tracking-[0.6em] text-[#C9A96E] uppercase mb-6 font-extrabold">NEXT SHOWCASE</p>
-              <h2 className="text-4xl md:text-7xl font-serif text-white tracking-tighter transition-all duration-700 group-hover:scale-[1.02] max-w-4xl mx-auto leading-tight">
+              <h2 className="text-3xl md:text-5xl font-serif text-white tracking-tighter transition-all duration-700 group-hover:scale-[1.02] max-w-4xl mx-auto leading-tight">
                 {nextProject.title}
               </h2>
               <div className="flex items-center justify-center gap-2 mt-8 text-xs font-extrabold tracking-widest text-[#C9A96E] uppercase opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">

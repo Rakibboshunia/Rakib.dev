@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { projectsData } from "../data/projectsData";
 import SpotlightCard from "../components/common/SpotlightCard";
 
-const categories = ["All", "E-Commerce", "Landing Page", "Dashboard", "SaaS & Web App", "WordPress", "Shopify"];
+const categories = ["All", "E-Commerce", "Landing Page", "SaaS & Web App", "WordPress", "Shopify"];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -39,7 +39,7 @@ const Projects = () => {
             <h2 className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs uppercase mb-6 block font-bold">
               • My Projects
             </h2>
-            <h3 className="text-5xl md:text-7xl font-serif leading-none tracking-tighter">
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-none tracking-tighter">
               Things I've <br /> <span className="text-[#C9A96E]">Built.</span>
             </h3>
           </div>

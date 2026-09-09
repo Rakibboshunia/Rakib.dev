@@ -130,7 +130,7 @@ const Contact = () => {
           <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs uppercase mb-4 block font-bold">
             • Let's Collaborate
           </span>
-          <h2 className="text-[#C9A96E] font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+          <h2 className="text-[#C9A96E] font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
             Ready to Build <br />Your <span className="text-gray-900 dark:text-white">Next Platform.</span>
           </h2>
 
