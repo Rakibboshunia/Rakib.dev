@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 import SEOHelmet from "../components/common/SEOHelmet";
 
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaWordpress, FaElementor } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiJavascript, SiTailwindcss, SiNextdotjs, SiBootstrap, SiShopify } from "react-icons/si";
+import { SiMongodb, SiExpress, SiJavascript, SiTailwindcss, SiNextdotjs, SiBootstrap, SiShopify, SiTypescript, SiWoocommerce } from "react-icons/si";
 
 const mernSkills = [
   { name: "HTML5", icon: <FaHtml5 /> },
   { name: "CSS3", icon: <FaCss3Alt /> },
   { name: "JavaScript", icon: <SiJavascript /> },
+  { name: "TypeScript", icon: <SiTypescript /> },
   { name: "Bootstrap", icon: <SiBootstrap /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss /> },
   { name: "React.js", icon: <FaReact /> },
@@ -17,6 +18,7 @@ const mernSkills = [
   { name: "Express.js", icon: <SiExpress /> },
   { name: "MongoDB", icon: <SiMongodb /> },
   { name: "WordPress", icon: <FaWordpress /> },
+  { name: "WooCommerce", icon: <SiWoocommerce /> },
   { name: "Elementor Pro", icon: <FaElementor /> },
   { name: "Shopify", icon: <SiShopify /> },
 ];
@@ -25,25 +27,25 @@ const experiences = [
   {
     role: "Frontend Developer",
     company: "Fire AI | Dhaka, Bangladesh",
-    year: "October 2025 – Present",
+    year: "October 2025 – August 2026",
     desc: "• Develop responsive web applications using React.js, Next.js, TypeScript, and Tailwind CSS.\n• Build reusable UI components and integrate RESTful APIs for dynamic user experiences.",
   },
+  // {
+  //   role: "CMS (WordPress & Shopify) Developer",
+  //   company: "JVAI | Dhaka, Bangladesh",
+  //   year: "June 2026 – August 2026",
+  //   desc: "• Develop responsive WordPress & Shopify websites with customized themes and e-commerce features.\n• Customize WooCommerce/Shopify stores, integrate required functionality, and optimize user experience.",
+  // },
   {
-    role: "CMS (WordPress & Shopify) Developer",
-    company: "JVAI | Dhaka, Bangladesh",
-    year: "November 2025 – Present",
-    desc: "• Develop responsive WordPress & Shopify websites with customized themes and e-commerce features.\n• Customize WooCommerce/Shopify stores, integrate required functionality, and optimize user experience.",
-  },
-  {
-    role: "WordPress & Shopify Expert",
-    company: "Freelance - Fiverr & Open Market (Facebook)",
-    year: "2025 - Present",
-    desc: "• Developed custom WordPress & Shopify websites for diverse international clients.\n• Managed full-cycle e-commerce setups, theme customizations, and store optimization.",
+    role: "Frontend, WordPress & Shopify Expert",
+    company: "Freelance - Fiverr (Fiverr Pro & Top Rated Seller) & Open Market (Facebook)",
+    year: "2024 - Present",
+    desc: "• Developed custom Frontend, WordPress & Shopify websites for diverse international clients.\n• Managed full-cycle e-commerce setups, theme customizations, and store optimization.",
   },
   {
     role: "Graphic Designer For POD (print on demand) Store",
     company: "Freelance - Various Clients Worldwide",
-    year: "2020 - 2023",
+    year: "2020 - 2024",
     desc: "Crafted unique designs for print-on-demand platforms, leveraging creativity and market trends to create compelling products that resonate with customers.",
   }
 ];
