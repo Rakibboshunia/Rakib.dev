@@ -42,7 +42,8 @@ const stats = [
 
 const highlights = [
   { label: "Stack", value: "MERN + Next.js" },
-  { label: "Specialty", value: "Shopify & WordPress" },
+  { label: "E-Commerce", value: "Shopify" },
+  { label: "CMS", value: "WordPress" },
   { label: "Status", value: "Open to Work" },
   { label: "Based In", value: "Bangladesh" },
 ];
