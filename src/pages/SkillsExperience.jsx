@@ -26,21 +26,21 @@ const mernSkills = [
 const experiences = [
   {
     role: "Frontend Developer",
-    company: "Fire AI | Dhaka, Bangladesh",
-    year: "October 2025 – August 2026",
-    desc: "• Develop responsive web applications using React.js, Next.js, TypeScript, and Tailwind CSS.\n• Build reusable UI components and integrate RESTful APIs for dynamic user experiences.",
+    company: "Join Venture AI | Mohakhali, Dhaka, Bangladesh",
+    year: "Nov. 2025 – Aug. 2026",
+    desc: "• Developed responsive web applications using React.js, JavaScript, and Tailwind CSS.\n• Implemented reusable UI components and maintained clean, scalable frontend architecture.\n• Integrated RESTful APIs to handle dynamic data and enhance user experience.",
   },
-  // {
-  //   role: "CMS (WordPress & Shopify) Developer",
-  //   company: "JVAI | Dhaka, Bangladesh",
-  //   year: "June 2026 – August 2026",
-  //   desc: "• Develop responsive WordPress & Shopify websites with customized themes and e-commerce features.\n• Customize WooCommerce/Shopify stores, integrate required functionality, and optimize user experience.",
-  // },
   {
-    role: "Frontend, WordPress & Shopify Expert",
-    company: "Freelance - Fiverr (Fiverr Pro & Top Rated Seller) & Open Market (Facebook)",
-    year: "2024 - Present",
-    desc: "• Developed custom Frontend, WordPress & Shopify websites for diverse international clients.\n• Managed full-cycle e-commerce setups, theme customizations, and store optimization.",
+    role: "Frontend Developer",
+    company: "Fire AI | Rampura, Dhaka, Bangladesh",
+    year: "Apr. 2025 – Oct. 2025",
+    desc: "• Developed responsive web applications using React.js, Next.js, TypeScript, and Tailwind CSS.\n• Built reusable and scalable UI components for modern web applications.\n• Integrated RESTful APIs to deliver dynamic and interactive user experiences.",
+  },
+  {
+    role: "Freelance | Frontend, Shopify & WordPress",
+    company: "Remote",
+    year: "2025 – Present",
+    desc: "• Develop responsive and reusable frontend interfaces using React.js, Next.js, JavaScript, and Tailwind\n• Develop and customize WordPress and Shopify websites according to client requirements.\n• Build and improve e-commerce stores using WooCommerce and Shopify.\n• Customize themes, layouts, sections, and website functionality to match specific project needs.",
   },
   {
     role: "Graphic Designer For POD (print on demand) Store",
@@ -76,7 +76,7 @@ const SkillsExperience = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-24">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
           {/* Skills Section */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -107,15 +107,15 @@ const SkillsExperience = () => {
             </div>
           </motion.div>
 
-          <div className="space-y-24">
+          <div className="space-y-16">
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-3xl font-serif text-gray-900 dark:text-white mb-12 border-b border-gray-200 dark:border-white/10 pb-6 tracking-tight">Professional Experience</h3>
-              <div className="flex flex-col gap-12">
+              <h3 className="text-3xl font-serif text-gray-900 dark:text-white mb-8 border-b border-gray-200 dark:border-white/10 pb-6 tracking-tight">Professional Experience</h3>
+              <div className="flex flex-col gap-8">
                 {experiences.map((exp, i) => (
                   <motion.div
                     key={i}
@@ -141,8 +141,8 @@ const SkillsExperience = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-3xl font-serif text-gray-900 dark:text-white mb-12 border-b border-gray-200 dark:border-white/10 pb-6 tracking-tight">Academic Background</h3>
-              <div className="flex flex-col gap-12">
+              <h3 className="text-3xl font-serif text-gray-900 dark:text-white mb-8 border-b border-gray-200 dark:border-white/10 pb-6 tracking-tight">Academic Background</h3>
+              <div className="flex flex-col gap-8">
                 {education.map((edu, i) => (
                   <motion.div
                     key={i}
