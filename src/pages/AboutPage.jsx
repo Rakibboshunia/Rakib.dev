@@ -12,7 +12,7 @@ const tenets = [
 
 const quickFacts = [
   { icon: <MapPin size={15} />, label: "Location", value: "Bangladesh" },
-  { icon: <Briefcase size={15} />, label: "Role", value: "Frontend Developer" },
+  { icon: <Briefcase size={15} />, label: "Role", value: "Full Stack Developer (MERN)" },
   { icon: <GraduationCap size={15} />, label: "Degree", value: "B.Sc in Computer Science" },
   { icon: <Globe size={15} />, label: "Availability", value: "Open to Work" },
 ];
@@ -142,9 +142,8 @@ const AboutPage = () => {
           <div>
             <h3 className="text-2xl font-serif text-gray-900 dark:text-white mb-4">The Present & Future</h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base font-light">
-              Today, as a Frontend Developer, I architect SaaS platforms, interactive e-commerce sites,
-              and highly secure corporate portals — while concurrently mastering backend technologies to
-              become a complete Full Stack Engineer. I continuously explore the bleeding edge of web technologies,
+              Today, as a Full Stack Developer (MERN), I architect SaaS platforms, interactive e-commerce sites,
+              and highly secure corporate portals — with complete mastery over both frontend aesthetics and robust backend architecture. I continuously explore the bleeding edge of web technologies,
               including AI integrations and advanced rendering techniques.
             </p>
           </div>

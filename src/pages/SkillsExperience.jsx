@@ -17,27 +17,27 @@ const mernSkills = [
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "Express.js", icon: <SiExpress /> },
   { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "Shopify", icon: <SiShopify /> },
   { name: "WordPress", icon: <FaWordpress /> },
   { name: "WooCommerce", icon: <SiWoocommerce /> },
-  { name: "Elementor Pro", icon: <FaElementor /> },
-  { name: "Shopify", icon: <SiShopify /> },
+  { name: "Elementor Pro", icon: <FaElementor /> }
 ];
 
 const experiences = [
   {
-    role: "Frontend Developer",
+    role: "CMS Developer",
     company: "Join Venture AI | Mohakhali, Dhaka, Bangladesh",
-    year: "Nov. 2025 – Aug. 2026",
-    desc: "• Developed responsive web applications using React.js, Next.js, TypeScript, JavaScript, and Tailwind CSS.\n• Implemented reusable UI components and maintained clean, scalable frontend architecture.\n• Integrated RESTful APIs to handle dynamic data and enhance user experience.",
+    year: "July. 2026 – Aug. 2026",
+    desc: "• Developed responsive web applications using Shopify, WordPress, WooCommerce, Elementor Pro.\n• Implemented reusable UI components and maintained clean, scalable frontend architecture.\n• Integrated RESTful APIs to handle dynamic data and enhance user experience.",
   },
   {
     role: "Frontend Developer",
     company: "Fire AI | Rampura, Dhaka, Bangladesh",
-    year: "Apr. 2025 – Oct. 2025",
+    year: "Oct. 2025 – June 2026",
     desc: "• Developed responsive web applications using React.js, JavaScript and Tailwind CSS.\n• Built reusable and scalable UI components for modern web applications.\n• Integrated RESTful APIs to deliver dynamic and interactive user experiences.",
   },
   {
-    role: "Freelance | Frontend, Shopify & WordPress",
+    role: "Freelance | Full Stack, Shopify & WordPress",
     company: "Remote",
     year: "2025 – Present",
     desc: "• Develop responsive and reusable frontend interfaces using React.js, Next.js, JavaScript, and Tailwind\n• Develop and customize WordPress and Shopify websites according to client requirements.\n• Build and improve e-commerce stores using WooCommerce and Shopify.\n• Customize themes, layouts, sections, and website functionality to match specific project needs.",

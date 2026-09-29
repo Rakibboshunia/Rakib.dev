@@ -23,9 +23,9 @@ const services = [
     icon: <SiNextdotjs />,
   },
   {
-    title: "Responsive Web Design",
-    desc: "Ensuring pixel-perfect, fully responsive layouts across all devices — mobile, tablet, and desktop.",
-    icon: <FaMobileAlt />,
+    title: "Shopify Store Development",
+    desc: "Building and customizing Shopify stores with conversion-optimized product pages and seamless checkout.",
+    icon: <FaShopify />,
   },
   {
     title: "WordPress Development",
@@ -33,9 +33,9 @@ const services = [
     icon: <FaWordpress />,
   },
   {
-    title: "Shopify Store Development",
-    desc: "Building and customizing Shopify stores with conversion-optimized product pages and seamless checkout.",
-    icon: <FaShopify />,
+    title: "Responsive Web Design",
+    desc: "Ensuring pixel-perfect, fully responsive layouts across all devices — mobile, tablet, and desktop.",
+    icon: <FaMobileAlt />,
   },
   {
     title: "E-Commerce Solutions",

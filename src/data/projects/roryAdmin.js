@@ -5,7 +5,7 @@ export const roryAdmin = {
   title: "Rory: Creative Admin Dashboard",
   category: "SaaS & Web App",
   badgeLabel: "ADMIN PANEL",
-  role: "Lead Frontend Engineer",
+  role: "Full Stack Developer (MERN)",
   year: "2025",
   description: "A feature-rich administrative dashboard built for managing a creative platform, focusing on data visualization and user management.",
   tags: ["#React", "#Chart.js", "#Firebase", "#TailwindCSS"],

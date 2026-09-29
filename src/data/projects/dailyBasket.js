@@ -5,7 +5,7 @@ export const dailyBasket = {
   title: "Daily Basket: Grocery E-Commerce Platform",
   category: "E-Commerce",
   badgeLabel: "E-COMMERCE PLATFORM",
-  role: "Frontend Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2026",
   description: "A complete grocery e-commerce application featuring both an engaging consumer landing page and an integrated management dashboard.",
   tags: ["#React", "#TailwindCSS", "#E-commerce"],

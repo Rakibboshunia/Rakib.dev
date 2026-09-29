@@ -17,7 +17,7 @@ export const nextResumeAi = {
   title: "NextResume AI: AI Resume Builder",
   category: "SaaS & Web App",
   badgeLabel: "AI PLATFORM",
-  role: "Full Stack Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2026",
   description: "An AI-powered resume builder featuring a multi-step form, real-time preview, and premium dark-themed UI.",
   tags: ["#Next.js", "#TailwindCSS", "#Prisma", "#NextAuth"],

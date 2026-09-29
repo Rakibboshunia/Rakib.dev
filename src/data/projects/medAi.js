@@ -5,7 +5,7 @@ export const medAi = {
   title: "Med AI: Healthcare Telemetry Portal",
   category: "SaaS & Web App",
   badgeLabel: "HEALTHCARE PORTAL",
-  role: "Lead Frontend Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2025",
   description: "A medical administration and user analytics platform designed for tracking doctor onboarding, pharmacy registrations, and patient growth telemetry.",
   tags: ["#React", "#Chart.js", "#TailwindCSS", "#Redux"],

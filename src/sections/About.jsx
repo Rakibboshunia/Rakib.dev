@@ -35,8 +35,8 @@ const Counter = ({ end, duration = 2, suffix = "" }) => {
 };
 
 const stats = [
-  { label: "Projects", value: 20, suffix: "+" },
-  { label: "Clients", value: 12, suffix: "+" },
+  { label: "Projects", value: 40, suffix: "+" },
+  { label: "Clients", value: 22, suffix: "+" },
   { label: "Rating", value: 5, suffix: "★" },
 ];
 
@@ -94,7 +94,7 @@ const About = () => {
             </h4>
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base md:text-lg mb-6">
-              As an experienced Frontend Developer expanding into Full Stack, I bridge the gap
+              As an experienced Full Stack Developer (MERN), I bridge the gap
               between complex functionality and stunning visual design — building applications
               that don't just work flawlessly, they leave a lasting impression.
             </p>

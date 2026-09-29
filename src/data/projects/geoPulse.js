@@ -5,7 +5,7 @@ export const geoPulse = {
   title: "GeoPulse: Interactive World Atlas",
   category: "Web Application",
   badgeLabel: "WORLD ATLAS",
-  role: "Frontend Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2025",
   description: "An interactive World Atlas application providing detailed country information, search functionality, and a responsive glassmorphism UI.",
   tags: ["#React", "#TailwindCSS", "#FramerMotion"],

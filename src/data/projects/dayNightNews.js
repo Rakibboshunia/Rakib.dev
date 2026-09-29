@@ -5,7 +5,7 @@ export const dayNightNews = {
   title: "Day-Night News: Dynamic Media Platform",
   category: "Landing Page",
   badgeLabel: "NEWS PLATFORM",
-  role: "UI/UX Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2025",
   description: "A sophisticated pixel-perfect recreation of a major news platform, featuring dynamic themes and a high-density information architecture.",
   tags: ["#React", "#TailwindCSS", "#ContextAPI"],

@@ -5,7 +5,7 @@ export const eduNest = {
   title: "EduNest: SaaS Education Platform",
   category: "SaaS & Web App",
   badgeLabel: "SAAS PLATFORM",
-  role: "Frontend Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2026",
   tags: ["#React", "#TailwindCSS", "#Vite", "#FramerMotion"],
   image: eduNestImg,

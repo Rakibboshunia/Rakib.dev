@@ -16,16 +16,16 @@ const Marquee = () => {
   ];
 
   return (
-    <div className="relative w-full h-[20vh] md:h-[25vh] flex items-center justify-center overflow-hidden z-20 bg-transparent my-4">
-      
+    <div className="relative w-full h-[30vh] md:h-[35vh] flex items-center justify-center overflow-hidden z-20 bg-transparent my-4">
+
       {/* First Line (Right to Left, Gold Background) */}
       <div className="absolute w-[150%] md:w-[115%] bg-[#C9A96E] py-4 flex whitespace-nowrap items-center border-y border-[#B0925B] -rotate-6 shadow-2xl z-20">
         <motion.div
           className="flex gap-8 md:gap-12 min-w-max"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
+          transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
         >
-          {[...marqueeItems, ...marqueeItems].map((item, index) => (
+          {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, index) => (
             <div key={index} className="flex items-center gap-4 md:gap-6">
               <span className="text-black/60 text-2xl transition-colors">
                 {item.icon}
@@ -44,9 +44,9 @@ const Marquee = () => {
         <motion.div
           className="flex gap-8 md:gap-12 min-w-max"
           animate={{ x: ["-50%", "0%"] }}
-          transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
+          transition={{ repeat: Infinity, ease: "linear", duration: 70 }}
         >
-          {[...marqueeItems, ...marqueeItems].map((item, index) => (
+          {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, index) => (
             <div key={index + 100} className="flex items-center gap-4 md:gap-6">
               <span className="text-[#C9A96E]/60 text-2xl transition-colors">
                 {item.icon}

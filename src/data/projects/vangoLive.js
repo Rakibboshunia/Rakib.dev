@@ -5,7 +5,7 @@ export const vangoLive = {
   title: "VANGO Live: B2B Commerce Platform",
   category: "Landing Page",
   badgeLabel: "LIVE COMMERCE",
-  role: "Frontend Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2026",
   description: "A world-class premium landing page for a revolutionary live commerce platform built to empower people who sell live.",
   tags: ["#React", "#TailwindCSS", "#FramerMotion"],

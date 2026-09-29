@@ -5,7 +5,7 @@ export const enterpriseErp = {
   title: "Enterprise ERP System",
   category: "SaaS & Web App",
   badgeLabel: "ENTERPRISE PLATFORM",
-  role: "Full Stack Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2026",
   description: "An advanced modular Enterprise Resource Planning (ERP) system with real-time analytics, order management, revenue tracking, and comprehensive business operations dashboard.",
   tags: ["#React.js", "#Next.js", "#Node.js", "#Express.js", "#MongoDB", "#TailwindCSS", "#shadcn/ui", "#TypeScript"],

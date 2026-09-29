@@ -5,7 +5,7 @@ export const edukai = {
   title: "Edukai: AI Recruitment Automation",
   category: "SaaS & Web App",
   badgeLabel: "AI & AUTOMATION",
-  role: "Full Frontend Engineer",
+  role: "Full Stack Developer (MERN)",
   year: "2026",
   description: "An AI-powered CV automation and recruitment dashboard system for monitoring real-time workflows and processing efficiency.",
   tags: ["#React", "#Node.js", "#TailwindCSS"],

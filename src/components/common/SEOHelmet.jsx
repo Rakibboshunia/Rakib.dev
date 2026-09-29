@@ -4,7 +4,7 @@ const SEOHelmet = ({ title, description, name = "Rakib Boshunia", type = "websit
   const siteTitle = title ? title : "Rakib Boshunia | Portfolio";
   const siteDescription = description
     ? description
-    : "I am a passionate Frontend Developer focused on creating clean UI, high performance, and responsive Web experiences.";
+    : "I am a passionate Full Stack Developer (MERN) focused on creating clean UI, high performance, and responsive Web experiences with robust backends.";
 
   return (
     <Helmet>

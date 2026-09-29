@@ -5,7 +5,7 @@ export const orebi = {
   title: "OREBI: High-Performance E-Commerce",
   category: "E-Commerce",
   badgeLabel: "E-COMMERCE",
-  role: "React & Redux Architect",
+  role: "Full Stack Developer (MERN)",
   year: "2025",
   description: "A premium e-commerce platform featuring complex filtering, cart management, and a high-performance architecture.",
   tags: ["#React", "#TailwindCSS", "#Redux"],

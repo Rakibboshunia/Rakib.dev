@@ -16,7 +16,7 @@ export const medicarePro = {
   title: "MediCare Pro: Hospital Management",
   category: "SaaS & Web App",
   badgeLabel: "HEALTHCARE PLATFORM",
-  role: "Full Stack Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2026",
   description: "A premium hospital management dashboard featuring real-time data visualization, patient management, and interactive micro-animations.",
   tags: ["#Next.js", "#TailwindCSS", "#FramerMotion"],

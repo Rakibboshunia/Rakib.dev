@@ -5,7 +5,7 @@ export const soundtrackMyNight = {
   title: "Soundtrack My Night: AI Web Platform",
   category: "SaaS & Web App",
   badgeLabel: "AI WEB PLATFORM",
-  role: "Interactive Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2025",
   description: "A complete platform featuring a high-energy interactive landing page combined with an AI-powered playlist generation dashboard.",
   tags: ["#React", "#SpotifyAPI", "#FramerMotion", "#TailwindCSS"],

@@ -18,7 +18,7 @@ export const taskflowAi = {
   title: "TaskFlow AI: Project Management",
   category: "SaaS & Web App",
   badgeLabel: "AI PLATFORM",
-  role: "Frontend Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2026",
   description: "An AI-powered project management dashboard featuring interactive Kanban boards, analytics, and an AI assistant interface.",
   tags: ["#Next.js", "#TailwindCSS", "#FramerMotion"],

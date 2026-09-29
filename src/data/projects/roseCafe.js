@@ -5,7 +5,7 @@ export const roseCafe = {
   title: "Rose Cafe: Interactive Culinary Platform",
   category: "Landing Page",
   badgeLabel: "PREMIUM CULINARY",
-  role: "Frontend Developer",
+  role: "Full Stack Developer (MERN)",
   year: "2026",
   description: "A premium interactive cafe and restaurant website featuring a dynamic digital menu, integrated reservation system, and fluid animations.",
   tags: ["#React", "#TailwindCSS", "#FramerMotion"],

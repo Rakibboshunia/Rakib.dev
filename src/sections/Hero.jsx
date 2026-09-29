@@ -40,7 +40,7 @@ const Hero = () => {
               </motion.div>
 
               <span className="text-[#C9A96E] font-serif tracking-[0.4em] text-xs md:text-sm uppercase mb-4 md:mb-6 block font-bold shadow-black drop-shadow-md">
-                MERN Stack | WordPress | Shopify
+                Full-Stack Development [MERN] | Shopify | WordPress
               </span>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-[0.9] tracking-tighter mb-6 md:mb-8 drop-shadow-2xl mix-blend-lighten text-white">
@@ -112,7 +112,7 @@ const Hero = () => {
             >
               <div>
                 <h4 className="text-white font-serif text-sm md:text-base tracking-wider mb-1">Al-Rakeb Boshunia</h4>
-                <p className="text-[9px] md:text-[10px] text-[#C9A96E] font-bold tracking-[0.25em] uppercase">Frontend & Aspiring Full Stack</p>
+                <p className="text-[9px] md:text-[10px] text-[#C9A96E] font-bold tracking-[0.25em] uppercase">Full Stack Developer (MERN)</p>
               </div>
               <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:border-[#C9A96E] group-hover:text-[#C9A96E] transition-all duration-500 bg-white/5">
                 <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
