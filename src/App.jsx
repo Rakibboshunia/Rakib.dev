@@ -5,6 +5,7 @@ import RootLayout from "./components/layout/RootLayout";
 import Preloader from "./components/common/Preloader";
 import PageWrapper from "./components/common/PageWrapper";
 import ChatbotWidget from "./sections/FAQ";
+import WhatsAppWidget from "./components/common/WhatsAppWidget";
 
 // Lazy-loaded page components for bundle size optimization
 const Home = lazy(() => import("./pages/Home"));
@@ -53,6 +54,7 @@ function App() {
 
       {/* 🤖 Global Floating Chatbot — visible on all pages */}
       {!loading && <ChatbotWidget />}
+      {!loading && <WhatsAppWidget />}
     </>
   );
 }

@@ -1,5 +1,5 @@
 
-import { FaEnvelope, FaPhoneAlt, FaGithub, FaLinkedin, FaFacebookF } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaGithub, FaLinkedin, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -147,6 +147,11 @@ const Contact = () => {
             <a href="tel:+8801779296092" className="flex items-center gap-3 w-fit hover:text-[#C9A96E] transition-colors duration-300">
               <FaPhoneAlt className="text-[#C9A96E]" />
               <span>+8801779296092</span>
+            </a>
+            
+            <a href="https://wa.me/8801779296092" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-fit hover:text-[#C9A96E] transition-colors duration-300">
+              <FaWhatsapp className="text-[#25D366]" />
+              <span>WhatsApp Me</span>
             </a>
           </div>
 
